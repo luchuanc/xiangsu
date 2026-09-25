@@ -2,6 +2,8 @@ export const LOGICAL_VIEWPORT_WIDTH = 640;
 export const LOGICAL_VIEWPORT_HEIGHT = 360;
 export const MIN_VIEWPORT_WIDTH = 568;
 export const MIN_VIEWPORT_HEIGHT = 320;
+export const EXPLORATION_JOYSTICK_HIT_SIZE = 136;
+export const EXPLORATION_JOYSTICK_INSET = 24;
 
 export type BlockedReason =
   | "invalidViewport"
@@ -112,14 +114,15 @@ function createSafeRect(
  */
 export function getExplorationHudMinimumSize(scale: number): ExplorationHudMinimumSize {
   const thresholds = getHitAreaThresholds(scale);
-  const joystickHitSize = Math.max(96 + 8, thresholds.hitSizeLogical);
+  const joystickHitSize = Math.max(EXPLORATION_JOYSTICK_HIT_SIZE, thresholds.hitSizeLogical);
+  const joystickInset = Math.max(EXPLORATION_JOYSTICK_INSET, thresholds.gapLogical);
   const actionSize = Math.max(56, thresholds.hitSizeLogical);
   const iconSize = Math.max(44, thresholds.hitSizeLogical);
   const topRowWidth = iconSize * 4 + thresholds.gapLogical * 3;
-  const bottomRowWidth = joystickHitSize + actionSize * 2 + thresholds.gapLogical * 4;
+  const bottomRowWidth = joystickInset + joystickHitSize + actionSize * 2 + thresholds.gapLogical * 3;
   return {
     width: Math.max(topRowWidth, bottomRowWidth),
-    height: iconSize + joystickHitSize + thresholds.gapLogical * 3,
+    height: iconSize + joystickHitSize + joystickInset + thresholds.gapLogical * 2,
     topRowWidth,
     joystickHitSize,
     actionSize,

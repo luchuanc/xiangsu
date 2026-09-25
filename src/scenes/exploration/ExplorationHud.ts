@@ -1,4 +1,6 @@
 import {
+  EXPLORATION_JOYSTICK_HIT_SIZE,
+  EXPLORATION_JOYSTICK_INSET,
   getHitAreaThresholds,
   type HitAreaThresholds,
   type SafeRect,
@@ -39,7 +41,7 @@ export class ExplorationHud {
   private safeRectValue: SafeRect;
   private hitSizeLogical = 48;
   private gapLogical = 8;
-  private joystickHitSizeLogical = 104;
+  private joystickHitSizeLogical = EXPLORATION_JOYSTICK_HIT_SIZE;
   private enabled = true;
   private interactionEnabled = false;
 
@@ -62,7 +64,7 @@ export class ExplorationHud {
     this.hitSizeLogical = Math.max(1, Math.ceil(options.hitSizeLogical));
     this.gapLogical = Math.max(1, Math.ceil(options.gapLogical));
     this.joystickHitSizeLogical = Math.max(
-      104,
+      EXPLORATION_JOYSTICK_HIT_SIZE,
       Math.ceil(options.joystickHitSizeLogical ?? this.hitSizeLogical),
     );
   }
@@ -82,24 +84,26 @@ export class ExplorationHud {
     const iconSize = Math.max(44, this.hitSizeLogical);
     const actionSize = Math.max(EXPLORATION_INTERACTION_BUTTON_SIZE, this.hitSizeLogical);
     const joystickSize = this.joystickHitSizeLogical;
+    const joystickInset = Math.max(EXPLORATION_JOYSTICK_INSET, this.gapLogical);
     const minimumWidth = Math.max(
       iconSize * 4 + this.gapLogical * 3,
-      joystickSize + actionSize * 2 + this.gapLogical * 4,
+      joystickInset + joystickSize + actionSize * 2 + this.gapLogical * 3,
     );
-    const minimumHeight = iconSize + joystickSize + this.gapLogical * 3;
+    const minimumHeight = iconSize + joystickSize + joystickInset + this.gapLogical * 2;
     if (rect.width < minimumWidth || rect.height < minimumHeight) {
       // ViewportService 会在生产路径提前给出 tooSmall；这里保护独立 HUD 适配器不输出越界控件。
       return Object.freeze({ safeRect: this.safeRectValue, controls: Object.freeze([]) });
     }
     const rightStart = rect.right - iconSize * 4 - this.gapLogical * 3;
-    // 摇杆是可见圆盘外再加一圈触控热区，底部必须直接以热区锚定安全区。
-    const bottomY = rect.bottom - joystickSize - this.gapLogical;
+    // 为拇指留出左侧和底部余量；右侧动作行保持原来的位置，不随摇杆放大上移。
+    const joystickY = rect.bottom - joystickSize - joystickInset;
+    const bottomY = rect.bottom - Math.max(104, this.hitSizeLogical) - this.gapLogical;
     const controls: ExplorationHudControl[] = [
       control("map", rightStart, topY, iconSize, iconSize, this.enabled),
       control("inventory", rightStart + (iconSize + this.gapLogical), topY, iconSize, iconSize, this.enabled),
       control("party", rightStart + (iconSize + this.gapLogical) * 2, topY, iconSize, iconSize, this.enabled),
       control("settings", rightStart + (iconSize + this.gapLogical) * 3, topY, iconSize, iconSize, this.enabled),
-      control("joystick", rect.x + this.gapLogical, bottomY, joystickSize, joystickSize, this.enabled),
+      control("joystick", rect.x + joystickInset, joystickY, joystickSize, joystickSize, this.enabled),
       control("interaction", rect.right - actionSize - this.gapLogical, bottomY, actionSize, actionSize, this.enabled && this.interactionEnabled),
       control("menu", rect.right - actionSize * 2 - this.gapLogical * 2, bottomY, actionSize, actionSize, this.enabled),
     ];

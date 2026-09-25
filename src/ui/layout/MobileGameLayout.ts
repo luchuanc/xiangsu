@@ -1,4 +1,4 @@
-import { getHitAreaThresholds, type ViewportResult } from "../../app/ViewportService";
+import { EXPLORATION_JOYSTICK_INSET, getExplorationHudMinimumSize, getHitAreaThresholds, type ViewportResult } from "../../app/ViewportService";
 
 export interface MobileGameLayout {
   readonly viewport: ViewportResult;
@@ -9,7 +9,7 @@ export interface MobileGameLayout {
     readonly left: number;
     readonly right: number;
     readonly bottom: number;
-    readonly joystickVisibleSize: 96;
+    readonly joystickVisibleSize: number;
     readonly joystickHitSize: number;
   };
 }
@@ -21,7 +21,8 @@ export interface MobileGameLayout {
 export function createMobileGameLayout(viewport: ViewportResult): MobileGameLayout {
   const thresholds = getHitAreaThresholds(viewport.scale);
   const safeRect = viewport.safeRect;
-  const joystickHitSize = Math.max(104, thresholds.hitSizeLogical);
+  const { joystickHitSize } = getExplorationHudMinimumSize(viewport.scale);
+  const joystickInset = Math.max(EXPLORATION_JOYSTICK_INSET, thresholds.gapLogical);
 
   return Object.freeze({
     viewport,
@@ -29,10 +30,10 @@ export function createMobileGameLayout(viewport: ViewportResult): MobileGameLayo
     gap: thresholds.gapLogical,
     fieldHud: Object.freeze({
       top: safeRect.y + thresholds.gapLogical,
-      left: safeRect.x + thresholds.gapLogical,
+      left: safeRect.x + joystickInset,
       right: safeRect.right - thresholds.gapLogical,
-      bottom: safeRect.bottom - joystickHitSize - thresholds.gapLogical,
-      joystickVisibleSize: 96 as const,
+      bottom: safeRect.bottom - joystickHitSize - joystickInset,
+      joystickVisibleSize: joystickHitSize - 16,
       joystickHitSize,
     }),
   });

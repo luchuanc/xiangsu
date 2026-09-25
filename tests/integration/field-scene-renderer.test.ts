@@ -15,6 +15,7 @@ import { ActorView } from "../../src/scenes/exploration/ActorView";
 import { ExplorationHud, type ExplorationHudLayout } from "../../src/scenes/exploration/ExplorationHud";
 import { TileMapView } from "../../src/scenes/exploration/TileMapView";
 import { FieldSceneRenderer } from "../../src/ui/rendering/FieldSceneRenderer";
+import { FieldHudRenderer } from "../../src/ui/rendering/FieldHudRenderer";
 import type { PixiRenderAssetSource } from "../../src/ui/rendering/PixiAssetResolver";
 import type { AssetEntryV1, FieldActorClipsV1 } from "../../src/content/data/assets.manifest";
 import type { FieldSceneFrame } from "../../src/scenes/exploration/FieldSceneView";
@@ -329,6 +330,35 @@ describe("FieldSceneRenderer", () => {
     renderer.destroy();
   });
 
+  it("原生触摸取消只释放所属摇杆触点，并在销毁时移除监听", () => {
+    const previousWindow = globalThis.window;
+    const target = new EventTarget();
+    const remove = vi.spyOn(target, "removeEventListener");
+    vi.stubGlobal("window", target);
+    const input = new InputState();
+    const viewport = calculateViewport({ width: 568, height: 320 });
+    const frame = makeFrame(mapDefinition(), [], new ExplorationHud(viewport.safeRect));
+    const renderer = new FieldHudRenderer({ root: new Container(), inputState: input, viewport });
+    try {
+      renderer.enter(frame.hud, frame.hudStatus, false);
+      const center = { x: renderer.joystickThumbDisplay!.x, y: renderer.joystickThumbDisplay!.y };
+      renderer.joystick.pointerDown({ pointerId: 1, global: { x: 92, y: 268 } });
+      renderer.joystick.globalPointerMove({ pointerId: 1, global: { x: 92, y: 148 } });
+      target.dispatchEvent(Object.assign(new Event("pointercancel"), { pointerId: 2 }));
+      expect(input.activePointerCount).toBe(1);
+      expect(input.snapshot().move.y).toBe(-1);
+      target.dispatchEvent(Object.assign(new Event("pointercancel"), { pointerId: 1 }));
+      expect(input.activePointerCount).toBe(0);
+      expect(input.snapshot().move).toEqual({ x: 0, y: 0 });
+      expect(renderer.joystickThumbDisplay!.position).toMatchObject(center);
+      renderer.destroy();
+      expect(remove).toHaveBeenCalledWith("pointercancel", expect.any(Function), true);
+    } finally {
+      renderer.destroy();
+      vi.stubGlobal("window", previousWindow);
+    }
+  });
+
   it("所有按钮和摇杆写入同一 InputState，并在禁用/暂停/销毁时清理指针", () => {
     const root = createPixiSceneRoot();
     const input = new InputState();
@@ -344,6 +374,14 @@ describe("FieldSceneRenderer", () => {
     renderer.hudRenderer.joystickDisplay.emit("globalpointermove", pointerEvent({ pointerId: 1, global: { x: 68, y: 20 }, preventDefault: vi.fn() }));
     expect(input.snapshot().move.x).toBeGreaterThan(0);
     renderer.hudRenderer.joystickDisplay.emit("pointerout", pointerEvent({ pointerId: 1, global: { x: 200, y: 20 }, preventDefault: vi.fn() }));
+    // 手指拖出圆盘仍持续移动，非所属触点离开或松开不能打断摇杆。
+    renderer.hudRenderer.joystickDisplay.emit("pointerout", pointerEvent({ pointerId: 9, global: { x: 200, y: 20 }, preventDefault: vi.fn() }));
+    renderer.hudRenderer.joystickDisplay.emit("pointerupoutside", pointerEvent({ pointerId: 9, global: { x: 200, y: 20 }, preventDefault: vi.fn() }));
+    expect(input.activePointerCount).toBe(1);
+    renderer.hudRenderer.joystickDisplay.emit("globalpointermove", pointerEvent({ pointerId: 1, global: { x: 200, y: 20 }, preventDefault: vi.fn() }));
+    expect(input.snapshot().move.x).toBe(1);
+    renderer.hudRenderer.joystickDisplay.emit("pointerupoutside", pointerEvent({ pointerId: 1, global: { x: 200, y: 20 }, preventDefault: vi.fn() }));
+    expect(input.snapshot().move).toEqual({ x: 0, y: 0 });
     expect(input.activePointerCount).toBe(0);
 
     renderer.hudRenderer.buttonDisplays.get("map")?.emit("pointerdown", pointerEvent({ pointerId: 2, client: { x: 20, y: 20 }, preventDefault: vi.fn() }));

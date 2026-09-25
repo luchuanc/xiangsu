@@ -1,7 +1,7 @@
 import { UI_FONT } from "./UiTheme";
 import { Container, Graphics, Rectangle, Text } from "pixi.js";
 
-import type { ViewportResult } from "../../app/ViewportService";
+import { EXPLORATION_JOYSTICK_HIT_SIZE, type ViewportResult } from "../../app/ViewportService";
 import {
   InputState,
   bindInputDisplayEvent,
@@ -251,9 +251,17 @@ export class FieldHudRenderer {
 
     // 浏览器失焦时 pointerup 可能永远不到达 canvas，必须主动收回摇杆和按钮所有权。
     if (typeof window !== "undefined") {
+      const target = window;
       const resetOnBlur = (): void => this.resetPointerVisuals();
-      window.addEventListener("blur", resetOnBlur);
-      this.blurUnbinds.push(() => window.removeEventListener("blur", resetOnBlur));
+      // 当前 Pixi EventSystem 未注册原生 pointercancel；直接转交所属触点，
+      // 避免系统取消触摸后仍移动，也不能因另一根手指取消而中断摇杆。
+      const cancelJoystick = (event: PointerEvent): void => { this.joystick?.pointerCancel(event); };
+      target.addEventListener("blur", resetOnBlur);
+      target.addEventListener("pointercancel", cancelJoystick, true);
+      this.blurUnbinds.push(
+        () => target.removeEventListener("blur", resetOnBlur),
+        () => target.removeEventListener("pointercancel", cancelJoystick, true),
+      );
     }
 
     // 初始布局只用于让控件从构造时就有有效命中区，首帧会以 frame.hud 再次校准。
@@ -414,8 +422,8 @@ export class FieldHudRenderer {
 
     const controls = controlMap(layout);
     const joystickControl = controls.get("joystick");
-    const joystickWidth = joystickControl?.width ?? 104;
-    const joystickHeight = joystickControl?.height ?? 104;
+    const joystickWidth = joystickControl?.width ?? EXPLORATION_JOYSTICK_HIT_SIZE;
+    const joystickHeight = joystickControl?.height ?? EXPLORATION_JOYSTICK_HIT_SIZE;
     for (const child of this.joystickDisplay.removeChildren()) child.destroy({ children: true });
     this.joystickDisplay.x = joystickControl?.x ?? 0;
     this.joystickDisplay.y = joystickControl?.y ?? 0;
@@ -424,25 +432,29 @@ export class FieldHudRenderer {
     const ring = new Graphics();
     const centerX = joystickWidth / 2;
     const centerY = joystickHeight / 2;
-    ring.circle(centerX + 3, centerY + 4, 48).fill({ color: FIELD_NAVY_DEEP, alpha: 0.78 });
+    const ringRadius = Math.min(joystickWidth, joystickHeight) / 2 - 8;
+    const thumbRadius = Math.min(18, Math.floor(ringRadius / 3));
+    const travelRadius = Math.max(0, ringRadius - thumbRadius - 4);
+    ring.eventMode = "none";
+    ring.circle(centerX + 3, centerY + 4, ringRadius).fill({ color: FIELD_NAVY_DEEP, alpha: 0.65 });
     ring
-      .circle(centerX, centerY, 48)
-      .fill({ color: 0x16263d, alpha: 0.94 })
+      .circle(centerX, centerY, ringRadius)
+      .fill({ color: 0x16263d, alpha: 0.78 })
       .stroke({ color: FIELD_GOLD, width: 2, alpha: 0.96, pixelLine: true });
-    ring.circle(centerX, centerY, 39).stroke({ color: FIELD_TEAL, width: 1, alpha: 0.8, pixelLine: true });
+    ring.circle(centerX, centerY, ringRadius - 10).stroke({ color: FIELD_TEAL, width: 1, alpha: 0.8, pixelLine: true });
     // 四向罗盘刻线让摇杆与地图探索语义更明确，同时不改变实际命中圆盘。
-    ring.rect(centerX - 1, centerY - 42, 2, 7).fill({ color: FIELD_GOLD_BRIGHT, alpha: 0.9 });
-    ring.rect(centerX - 1, centerY + 35, 2, 7).fill({ color: FIELD_GOLD_BRIGHT, alpha: 0.9 });
-    ring.rect(centerX - 42, centerY - 1, 7, 2).fill({ color: FIELD_GOLD_BRIGHT, alpha: 0.9 });
-    ring.rect(centerX + 35, centerY - 1, 7, 2).fill({ color: FIELD_GOLD_BRIGHT, alpha: 0.9 });
+    ring.rect(centerX - 1, centerY - ringRadius + 6, 2, 8).fill({ color: FIELD_GOLD_BRIGHT, alpha: 0.9 });
+    ring.rect(centerX - 1, centerY + ringRadius - 14, 2, 8).fill({ color: FIELD_GOLD_BRIGHT, alpha: 0.9 });
+    ring.rect(centerX - ringRadius + 6, centerY - 1, 8, 2).fill({ color: FIELD_GOLD_BRIGHT, alpha: 0.9 });
+    ring.rect(centerX + ringRadius - 14, centerY - 1, 8, 2).fill({ color: FIELD_GOLD_BRIGHT, alpha: 0.9 });
     ring.circle(centerX, centerY, 12).stroke({ color: 0x476f7a, width: 1, alpha: 0.7, pixelLine: true });
     ring.poly([centerX, centerY - 7, centerX + 3, centerY, centerX, centerY + 7, centerX - 3, centerY], true).fill({ color: 0x5fa5a4, alpha: 0.72 });
     this.joystickDisplay.addChild(ring);
     this.joystickThumb = new Graphics();
-    this.joystickThumb.circle(2, 3, 10).fill({ color: FIELD_NAVY_DEEP, alpha: 0.82 });
-    this.joystickThumb.circle(0, 0, 9).fill({ color: FIELD_GOLD, alpha: 0.98 });
-    this.joystickThumb.circle(0, 0, 9).stroke({ color: 0xfff0c2, width: 2, alpha: 0.98, pixelLine: true });
-    this.joystickThumb.rect(-4, -1, 8, 2).fill({ color: 0x6d4b36, alpha: 0.85 });
+    this.joystickThumb.circle(2, 3, thumbRadius + 1).fill({ color: FIELD_NAVY_DEEP, alpha: 0.82 });
+    this.joystickThumb.circle(0, 0, thumbRadius).fill({ color: FIELD_GOLD, alpha: 0.98 });
+    this.joystickThumb.circle(0, 0, thumbRadius).stroke({ color: 0xfff0c2, width: 2, alpha: 0.98, pixelLine: true });
+    for (const y of [-5, 0, 5]) this.joystickThumb.rect(-6, y - 1, 12, 2).fill({ color: 0x6d4b36, alpha: 0.65 });
     this.joystickThumb.eventMode = "none";
     this.joystickThumb.position.set(centerX, centerY);
     this.joystickDisplay.addChild(this.joystickThumb);
@@ -451,19 +463,19 @@ export class FieldHudRenderer {
       inputState: this.inputState,
       displayObject: this.joystickDisplay as unknown as InputDisplayObjectLike,
       radius: 48,
+      deadZone: 0.12,
       onVectorChange: (vector) => {
         if (!this.joystickThumb) return;
         const centerX = joystickWidth / 2;
         const centerY = joystickHeight / 2;
         // 拇指节点只在圆盘内部移动；缩小一点轨道避免图形越出外圈。
-        const travelRadius = Math.max(0, Math.min(38, Math.min(joystickWidth, joystickHeight) / 2 - 10));
         this.joystickThumb.position.set(
           centerX + vector.x * travelRadius,
           centerY + vector.y * travelRadius,
         );
       },
     });
-    this.bindPointerOut(this.joystickDisplay, () => this.joystick.reset(), this.controlUnbinds);
+    // 拖出热区后继续接收 globalpointermove；仅松手、取消或暂停时复位。
 
     for (const id of CONTROL_IDS) {
       const control = controls.get(id);

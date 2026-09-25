@@ -14,10 +14,10 @@ describe("MobileGameLayout", () => {
 
     expect(layout).toMatchObject({ hitSize, gap });
     expect(layout.viewport).toBe(viewport);
-    expect(layout.fieldHud.joystickHitSize).toBe(Math.max(104, hitSize));
+    expect(layout.fieldHud.joystickHitSize).toBe(Math.max(136, hitSize));
   });
 
-  it("摇杆和动作控件在安全区内，底部锚点不复用旧的 56px action Y", () => {
+  it("放大的摇杆在安全区内留出拇指余量，且不与其他控件重叠", () => {
     const viewport = calculateViewport(
       { width: 844, height: 390 },
       { top: 20, right: 26, bottom: 34, left: 22 },
@@ -35,9 +35,14 @@ describe("MobileGameLayout", () => {
 
     const joystick = layout.controls.find((item) => item.id === "joystick");
     expect(joystick).toBeDefined();
-    expect(joystick!.y).toBe(
-      viewport.safeRect.bottom - Math.max(104, thresholds.hitSizeLogical) - thresholds.gapLogical,
-    );
+    expect(joystick!.width).toBeGreaterThanOrEqual(136);
+    expect(joystick!.x - viewport.safeRect.x).toBeGreaterThanOrEqual(24);
+    expect(viewport.safeRect.bottom - joystick!.y - joystick!.height).toBeGreaterThanOrEqual(24);
+    for (const other of layout.controls.filter((item) => item.id !== "joystick")) {
+      const overlaps = joystick!.x < other.x + other.width && joystick!.x + joystick!.width > other.x
+        && joystick!.y < other.y + other.height && joystick!.y + joystick!.height > other.y;
+      expect(overlaps).toBe(false);
+    }
   });
 
   it("极端安全区不生成越界或重叠控件，而由 tooSmall 门禁阻止进入", () => {
