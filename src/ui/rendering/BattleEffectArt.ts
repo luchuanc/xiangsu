@@ -1,3 +1,4 @@
+import { assetUrl } from "../../app/assetUrl";
 import type { Element } from "../../content/contracts";
 import { ANIMATION_DEFINITIONS, type AnimationPresetId } from "../../content/data/animations";
 
@@ -27,5 +28,5 @@ export function skillIconUrl(skillId: string): string {
   const icon = ["heal", "shield", "status", "summon"].includes(preset) ? preset
     : preset === "passive" ? "status" : ["fire", "frost", "lightning"].includes(element) ? element
     : element === "holy" ? "heal" : ["dark", "poison"].includes(element) ? "status" : "melee";
-  return `/assets/art/completion/v1/icons/skill-${icon}.png`;
+  return assetUrl(`/assets/art/completion/v1/icons/skill-${icon}.png`);
 }

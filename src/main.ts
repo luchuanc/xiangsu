@@ -1,3 +1,4 @@
+import { assetUrl } from "./app/assetUrl";
 import type { ApplicationOptions } from "pixi.js";
 import type { GameApplicationLike } from "./app/GameApp";
 import { floors06To10AssetManifest } from "./content/data/assets.manifest";
@@ -104,7 +105,7 @@ export async function bootstrap(): Promise<void> {
         && runtimeAdapter.assetService !== null && runtimeAdapter.assetService !== undefined) {
         const { GameFlowController } = await import("./app/GameFlowController");
         const { Assets } = await import("pixi.js");
-        const titleBackgroundTexture = await Assets.load<import("pixi.js").Texture>("/assets/art/interface-premium/v1/town-title.png");
+        const titleBackgroundTexture = await Assets.load<import("pixi.js").Texture>(assetUrl("/assets/art/interface-premium/v1/town-title.png"));
         const controller = new GameFlowController({ runtime: runtime as unknown as GameFlowRuntimeLike, gameRoot, titleBackgroundTexture });
         flow = controller;
         await controller.start();

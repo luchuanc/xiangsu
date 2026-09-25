@@ -1,3 +1,4 @@
+import { assetUrl } from "./assetUrl";
 import {
   createDomainError,
   failure,
@@ -86,7 +87,7 @@ function defaultCanPlayType(mimeType: string): string {
 }
 
 async function defaultFetch(src: string): Promise<ArrayBuffer> {
-  const response = await fetch(src);
+  const response = await fetch(assetUrl(src));
   if (!response.ok) throw new Error(`asset_fetch_${response.status}`);
   return response.arrayBuffer();
 }
@@ -118,7 +119,7 @@ function toPixiManifest(manifest: AssetManifestV1): { bundles: Array<{ name: str
           : asset.kind === "bitmapFont"
             ? asset.descriptorSrc
             : asset.src;
-        return [{ alias: asset.id, src }];
+        return [{ alias: asset.id, src: assetUrl(src) }];
       }),
     })).filter((bundle) => byBundle.has(bundle.name)),
   };

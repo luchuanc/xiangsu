@@ -1,3 +1,4 @@
+import { assetUrl } from "./assetUrl";
 import type { AssetLease } from "./AssetService";
 import type { AssetServiceLike } from "./GameApp";
 import type { SaveCandidateKind } from "./GameStore";
@@ -4015,7 +4016,7 @@ export class GameFlowController {
             if (!src) return;
             const image = documentValue.createElement("img");
             image.className = "management-asset-icon";
-            image.src = src;
+            image.src = assetUrl(src);
             image.alt = "";
             image.width = 48;
             image.height = 48;

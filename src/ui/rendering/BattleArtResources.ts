@@ -1,3 +1,4 @@
+import { assetUrl } from "../../app/assetUrl";
 import { Assets, Rectangle, Texture } from "pixi.js";
 import portraitUrls from "../../../public/assets/art/completion/v1/portraits.json";
 import effectAtlas from "../../../public/assets/art/completion/v1/atlases/extended-fx.json";
@@ -22,13 +23,13 @@ export function loadBattleArtResources(): Promise<BattleArtResources> {
 
 async function load(): Promise<BattleArtResources> {
   const [background, effectsSource] = await Promise.all([
-    Assets.load<Texture>("/assets/art/battle-premium/v1/forest-arena.png"),
-    Assets.load<Texture>("/assets/art/completion/v1/atlases/battle-fx.png"),
+    Assets.load<Texture>(assetUrl("/assets/art/battle-premium/v1/forest-arena.png")),
+    Assets.load<Texture>(assetUrl("/assets/art/completion/v1/atlases/battle-fx.png")),
   ]);
   const actors = new Map<string, Texture>();
   // Load reviewed 160px cutouts, avoiding decoding the large generation atlases in battle.
   await Promise.all(Object.entries(portraitUrls).map(async ([id, url]) => {
-    const texture = await Assets.load<Texture>(url);
+    const texture = await Assets.load<Texture>(assetUrl(url));
     texture.source.scaleMode = "nearest";
     actors.set(id, texture);
   }));
