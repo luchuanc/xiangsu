@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>像素远征 · 美术资源预览</title>
+<link rel="icon" type="image/svg+xml" href="/assets/ui/skill.svg">
+<style>
+:root{color-scheme:dark;font-family:system-ui,"PingFang SC",sans-serif;background:#0c1420;color:#e7e2d5}*{box-sizing:border-box}body{margin:0;padding:40px max(24px,calc((100vw - 1280px)/2))}header{display:flex;justify-content:space-between;align-items:end;gap:24px}h1{font-size:32px;margin:8px 0 16px}small{color:#ceb179;letter-spacing:.12em}p{color:#a0b1bf;line-height:1.7}a{color:#89d3cc}nav{display:flex;flex-wrap:wrap;gap:8px;position:sticky;top:0;background:#0c1420ee;padding:16px 0;z-index:2}button{border:1px solid #344454;background:#152330;color:#c7d3db;padding:12px 18px;border-radius:8px;min-height:44px;cursor:pointer;font:inherit}button[aria-pressed=true]{background:#ddc28c;color:#19212a;border-color:#ddc28c}button:focus-visible,a:focus-visible{outline:2px solid #7bddd1;outline-offset:4px}#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}.card{border:1px solid #293b4b;background:#13212e;border-radius:12px;padding:16px;min-width:0}.stage{height:150px;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse,#213644,transparent 70%);margin-bottom:12px}.stage img{width:128px;height:128px;object-fit:contain;image-rendering:pixelated}.sprite{image-rendering:pixelated;background-repeat:no-repeat}.name{display:block;font-size:14px}.id{display:block;overflow-wrap:anywhere;color:#7d93a6;font-size:10px;margin-top:8px}.fx{width:96px;height:96px;image-rendering:pixelated;background-repeat:no-repeat}#status{font-size:13px}.empty{grid-column:1/-1}footer{padding:32px 0;color:#8195a4;font-size:13px}@media(max-width:600px){body{padding:20px}header{display:block}h1{font-size:25px}#grid{grid-template-columns:repeat(2,minmax(0,1fr))}.stage{height:112px}.stage img{width:100px;height:100px}nav{gap:6px}button{padding:10px 12px;font-size:13px}}
+.name{overflow-wrap:anywhere}.card,.stage{max-width:100%}
+</style>
+<header><div><small>PIXEL EXPEDITION / ART COLLECTION</small><h1>远征美术资源库</h1><p>装备、怪物、角色与连续技能特效。透明素材可直接用于游戏。</p></div><a href="/">返回游戏 →</a></header>
+<nav aria-label="素材分类" id="tabs"></nav><p id="status" role="status">正在加载资源清单…</p><main id="grid"></main>
+<footer>新增动作使用立绘变换动画；被动技能无需施法动画。此页为美术验收预览，不改变游戏存档。</footer>
+<script type="module">
+const base='/assets/art/completion/v1';
+const tabs=document.getElementById('tabs'),grid=document.getElementById('grid'),status=document.getElementById('status');
+const labels={equipment:'装备',enemies:'怪物',characters:'角色',effects:'技能特效',statuses:'状态',combos:'羁绊',ui:'界面',encounters:'遭遇标记'};
+let frame=0,playing=[];
+try{
+const [items,fx,ui]=await Promise.all([fetch(`${base}/review.json`).then(r=>r.json()),fetch(`${base}/atlases/extended-fx.json`).then(r=>r.json()),fetch(`${base}/atlases/core-ui.json`).then(r=>r.json())]);
+const effects=[['斩击','fx_slash',6],...['physical','fire','frost','lightning','holy','dark','poison','true'].map((v,i)=>[['物理弹道','火焰','冰霜','雷电','圣光','暗影','毒素','真实伤害'][i],`fx_element_${v}`,8]),['治疗','fx_heal',6],['护盾','fx_shield',6],['状态','fx_status',4],['召唤','fx_summon',8]];
+const card=(name,id)=>{const el=document.createElement('article');el.className='card';const stage=document.createElement('div');stage.className='stage';const title=document.createElement('strong');title.className='name';title.textContent=name;const key=document.createElement('span');key.className='id';key.textContent=id;el.append(stage,title,key);grid.append(el);return stage;};
+function render(group){grid.replaceChildren();playing=[];for(const b of tabs.children)b.setAttribute('aria-pressed',String(b.dataset.group===group));
+if(group==='effects'){for(const [name,prefix,count]of effects){const stage=card(name,prefix);const el=document.createElement('div');el.className='fx';el.style.backgroundImage=`url(${base}/atlases/battle-fx.png)`;stage.append(el);playing.push({el,frames:Array.from({length:count},(_,i)=>fx.frames[`${prefix}_${String(i).padStart(2,'0')}`].frame)});}animate();}
+else if(group==='ui'){for(const name of Object.keys(ui.frames)){const stage=card(name,name),img=document.createElement('img');img.src=`${base}/source/ui/${name}.svg`;img.alt=name;stage.append(img);}}
+else for(const item of items.filter(x=>x.group===group)){const stage=card(item.name,item.id);if(item.frame){const el=document.createElement('div');el.className='sprite';const scale=2;Object.assign(el.style,{width:`${item.frame.width*scale}px`,height:`${item.frame.height*scale}px`,backgroundImage:`url(${item.src})`,backgroundSize:`${item.frame.width*item.frame.columns*scale}px ${item.frame.height*item.frame.rows*scale}px`});stage.append(el);}else{const img=document.createElement('img');img.src=item.src;img.alt=item.name;stage.append(img);}}
+status.textContent=`${labels[group]} · ${grid.children.length} 项`;
+}
+function animate(){for(const item of playing){const f=item.frames[frame%item.frames.length],scale=96/f.w;item.el.style.backgroundSize=`${fx.meta.size.w*scale}px ${fx.meta.size.h*scale}px`;item.el.style.backgroundPosition=`${-f.x*scale}px ${-f.y*scale}px`;}}
+for(const [group,label]of Object.entries(labels)){const button=document.createElement('button');button.textContent=label;button.dataset.group=group;button.onclick=()=>render(group);tabs.append(button);}
+render('equipment');setInterval(()=>{if(document.hidden||matchMedia('(prefers-reduced-motion: reduce)').matches)return;frame++;animate();},100);
+}catch(error){status.textContent='资源加载失败，请刷新重试。';console.error(error);}
+</script>
+</html>

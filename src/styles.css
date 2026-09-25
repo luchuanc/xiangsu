@@ -1,0 +1,805 @@
+:root {
+  --rpg-ink: #0b1420;
+  --rpg-panel: #142536;
+  --rpg-gold: #c6a36b;
+  --rpg-paper: #f3e8d1;
+  --rpg-muted: #acbdc9;
+  color: #f8f0d5;
+  background: #11131a;
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #11131a;
+}
+
+#app {
+  position: relative;
+}
+
+#game-root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden;
+  background: #080f18;
+  image-rendering: pixelated;
+  --safe-area-inset-top: env(safe-area-inset-top, 0px);
+  --safe-area-inset-right: env(safe-area-inset-right, 0px);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-inset-left: env(safe-area-inset-left, 0px);
+}
+
+#game-root canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 640px;
+  height: 360px;
+  image-rendering: pixelated;
+}
+
+#startup-placeholder {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  color: #f8f0d5;
+  background: rgb(17 19 26 / 72%);
+  font-size: clamp(14px, 3vw, 20px);
+  letter-spacing: 0.08em;
+  pointer-events: none;
+}
+
+/* 原生 hidden 属性的明确样式优先于占位层的 display:grid，避免遮住已进入的标题画布。 */
+#startup-placeholder[hidden] {
+  display: none;
+}
+
+.system-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: #f8f0d5;
+  background: rgb(17 19 26 / 88%);
+  font-size: clamp(14px, 3vw, 20px);
+  letter-spacing: 0.08em;
+  text-align: center;
+  pointer-events: auto;
+}
+
+/* hidden 状态必须真正从合成层移除，否则空遮罩仍会压暗 Pixi canvas。 */
+#system-overlay[hidden] {
+  display: none;
+}
+
+/* 移动 H5 的真实流程控件：canvas 保留逻辑画布承载，DOM 只承载可触控命令。 */
+#game-flow-ui {
+  position: absolute;
+  inset: auto var(--safe-area-inset-left) var(--safe-area-inset-bottom) var(--safe-area-inset-right);
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  max-height: min(70vh, 280px);
+  max-height: min(70dvh, 280px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  color: #f8f0d5;
+  font-size: 13px;
+  pointer-events: none;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+#game-flow-ui p {
+  flex-basis: 100%;
+  margin: 0;
+  padding: 6px 10px;
+  text-align: center;
+  text-shadow: 1px 1px #11131a;
+}
+
+#game-flow-ui button {
+  min-width: 48px;
+  min-height: 44px;
+  padding: 8px 14px;
+  color: #11131a;
+  background: #f8f0d5;
+  border: 2px solid #1c2430;
+  border-radius: 4px;
+  box-shadow: 2px 2px 0 #11131a;
+  font: inherit;
+  font-weight: 700;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+#game-flow-ui button:disabled {
+  color: #6e6b61;
+  background: #c8c1ab;
+  opacity: 0.72;
+}
+
+#game-flow-ui [data-testid="exploration-position"] {
+  color: #ffe9a6;
+  background: rgb(17 19 26 / 72%);
+  border: 1px solid #66583a;
+}
+
+#game-flow-ui [data-testid="exploration-movement"] {
+  flex-basis: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(48px, 64px));
+  justify-content: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+/* 方向键需要在移动端持续接收指针，禁止浏览器滚动/缩放手势抢占触点。 */
+#game-flow-ui [data-exploration-move] {
+  min-width: 48px;
+  min-height: 48px;
+  padding: 8px;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* 商店报价较多时限制面板高度，让移动端可以在面板内部滚动购买。 */
+#game-flow-ui [data-testid="merchant-panel"] {
+  flex-basis: 100%;
+  min-width: 0;
+  max-width: 100%;
+  max-height: min(44vh, 240px);
+  max-height: min(44dvh, 240px);
+  padding: 8px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: #263342;
+  border: 2px solid #f8f0d5;
+  pointer-events: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 背包成长信息层：保持移动端可滚动，同时让品质和词条层级一眼可读。 */
+#game-flow-ui .inventory-detail-card,
+#game-flow-ui .inventory-equipped-list {
+  flex-basis: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 10px;
+  overflow-wrap: anywhere;
+  background: rgb(24 30 40 / 92%);
+  border: 2px solid #f8f0d5;
+  box-shadow: 3px 3px 0 #11131a;
+  pointer-events: auto;
+}
+
+#game-flow-ui .inventory-detail-card {
+  line-height: 1.55;
+  text-align: left;
+}
+
+#game-flow-ui .inventory-detail-card[data-quality="common"] { border-color: #c8c1ab; }
+#game-flow-ui .inventory-detail-card[data-quality="magic"] { border-color: #78b7ff; }
+#game-flow-ui .inventory-detail-card[data-quality="rare"] { border-color: #f5d36f; }
+#game-flow-ui .inventory-detail-card[data-quality="epic"] { border-color: #d69cff; }
+#game-flow-ui .inventory-detail-card[data-quality="abyss"] { border-color: #ff7f9f; }
+
+#game-flow-ui .inventory-compare-line {
+  flex-basis: 100%;
+  margin: 0;
+  padding: 7px 10px;
+  color: #bfe8ff;
+  background: rgb(25 54 73 / 82%);
+  border-left: 3px solid #78b7ff;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+#game-flow-ui .inventory-equipped-list {
+  max-height: min(36vh, 220px);
+  max-height: min(36dvh, 220px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#game-flow-ui .inventory-equipped-list p {
+  margin: 0;
+  padding: 5px 0;
+  text-align: left;
+}
+
+/* 操作按钮成组横向排列，仍沿用全局不小于 48×44 的触控命中区。 */
+#game-flow-ui button[data-testid^="management-inventory-equip-"],
+#game-flow-ui button[data-testid^="management-inventory-unequip-"] {
+  min-width: 48px;
+  min-height: 44px;
+}
+
+/*
+ * 标题页的 DOM 只承担可访问性和稳定命中，不再抢占画布视觉；旧流程控件
+ * 暂时保留在树中供迁移测试使用，但通过 legacy-debug-ui 完全隐藏。
+ */
+#game-flow-ui.semantic-ui {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: block;
+  max-height: none;
+  padding: 0;
+  overflow: visible;
+  color: transparent;
+  font-size: 0;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#game-flow-ui.semantic-ui.legacy-debug-ui {
+  display: block;
+}
+
+/* 野外移动由画布摇杆承担；嵌套的旧方向按钮不能漏出默认浅色按钮底板。 */
+#game-flow-ui.semantic-ui.legacy-debug-ui [data-testid="exploration-movement"] {
+  display: none;
+  pointer-events: none;
+}
+
+#game-flow-ui.semantic-ui .semantic-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+#game-flow-ui.semantic-ui > button {
+  position: absolute;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  color: transparent;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 0;
+  line-height: 0;
+  opacity: 0;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+#game-flow-ui.semantic-ui > button:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 城镇 Pixi 模态的透明语义镜像：画布负责视觉，按钮只负责无障碍与稳定触控命中。 */
+#game-flow-ui.semantic-ui > button.town-modal-semantic {
+  z-index: 6;
+  min-width: 48px;
+  min-height: 48px;
+  touch-action: manipulation;
+}
+
+#game-flow-ui.semantic-ui > button.town-modal-semantic:disabled {
+  pointer-events: none;
+}
+
+/* Visible DOM screens use the same palette as the Pixi HUD. */
+#game-flow-ui.management-ui,
+#game-flow-ui.reward-ui {
+  container-type: inline-size;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 14px;
+  max-height: none;
+  padding: clamp(14px, 2.2vw, 32px);
+  overflow: hidden;
+  color: var(--rpg-paper);
+  background: linear-gradient(105deg, #0c1824fa 20%, #102330ee 65%, #142835e8),
+    url('/assets/art/interface-premium/v1/town-title.png') center / cover;
+  background-color: #0b1420;
+  border: 1px solid #51606a;
+  box-shadow: inset 0 0 0 5px #0b1420, inset 0 0 0 6px #c6a36b28;
+  font-size: clamp(13px, 1.1vw, 16px);
+  line-height: 1.55;
+  pointer-events: auto;
+}
+
+#game-flow-ui.management-ui .semantic-status,
+#game-flow-ui.reward-ui .semantic-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  padding: 0;
+  margin: -1px;
+  border: 0;
+}
+
+#game-flow-ui.management-ui .management-header {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 2px 12px;
+  border-bottom: 1px solid #c6a36b38;
+}
+
+#game-flow-ui.management-ui .management-title {
+  margin: 0;
+  color: var(--rpg-paper);
+  font-family: "Songti SC", "STSong", "SimSun", serif;
+  font-size: clamp(22px, 2.4vw, 34px);
+  letter-spacing: .12em;
+  line-height: 1.25;
+  text-shadow: none;
+}
+
+#game-flow-ui.management-ui .management-eyebrow {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--rpg-gold);
+  font: 10px/1.3 system-ui, sans-serif;
+  letter-spacing: .22em;
+}
+
+#game-flow-ui.management-ui .management-wallet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 24px;
+  color: var(--rpg-muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+#game-flow-ui.management-ui .management-wallet strong {
+  margin-left: 8px;
+  color: #ebcd92;
+  font-size: 16px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+#game-flow-ui.management-ui .management-tabs {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  border-bottom: 1px solid #314553;
+}
+
+#game-flow-ui.management-ui button,
+#game-flow-ui.reward-ui button {
+  flex: 0 0 auto;
+  min-width: 48px;
+  min-height: 48px;
+  margin: 0;
+  padding: 10px 14px;
+  border: 1px solid #566370;
+  border-radius: 3px;
+  color: var(--rpg-paper);
+  background: #203344;
+  box-shadow: inset 0 1px #ffffff09, 0 2px #070e1644;
+  font: inherit;
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: center;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+#game-flow-ui.management-ui .management-tabs button {
+  flex: 1;
+  padding: 8px 6px;
+  color: #b0c2ca;
+  background: transparent;
+  border-color: transparent;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#game-flow-ui.management-ui button:disabled,
+#game-flow-ui.reward-ui button:disabled {
+  color: #94a3ae;
+  background: #15222e;
+  border-color: #344651;
+  box-shadow: none;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+#game-flow-ui.management-ui .management-tabs button[aria-current="page"],
+#game-flow-ui.management-ui .management-character-picker button:disabled {
+  color: #f1d296;
+  background: #c6a36b0e;
+  border-color: transparent;
+  border-bottom-color: var(--rpg-gold);
+  cursor: default;
+}
+
+#game-flow-ui.management-ui button[data-tone="primary"],
+#game-flow-ui.reward-ui button[data-testid="claim-reward"] {
+  color: #17202a;
+  background: #c6a36b;
+  border-color: #e0c18e;
+  font-weight: 650;
+}
+
+#game-flow-ui.management-ui button[data-tone="primary"]:disabled {
+  color: #94a3ae;
+  background: #15222e;
+  border-color: #344651;
+}
+
+#game-flow-ui button:focus-visible {
+  outline: 2px solid #f4d294;
+  outline-offset: 3px;
+}
+
+/* Transparent semantic controls must still reveal keyboard focus over the canvas. */
+#game-flow-ui.semantic-ui > button:focus-visible {
+  opacity: 1;
+  background: #f4d29412;
+  outline-offset: 2px;
+}
+
+#game-flow-ui.semantic-ui > button { cursor: pointer; }
+
+@media (hover: hover) {
+  #game-flow-ui.management-ui button:not(:disabled):hover,
+  #game-flow-ui.reward-ui button:not(:disabled):hover {
+    background: #2c4656;
+    border-color: #c6a36b;
+  }
+  #game-flow-ui.management-ui button[data-tone="primary"]:not(:disabled):hover,
+  #game-flow-ui.reward-ui button[data-testid="claim-reward"]:not(:disabled):hover {
+    background: #e0be83;
+  }
+  #game-flow-ui.semantic-ui > button:not(:disabled):hover {
+    opacity: 1;
+    background: #f4d2940a;
+    box-shadow: inset 0 0 0 1px #f4d29466;
+  }
+}
+
+#game-flow-ui.management-ui button:not(:disabled):active,
+#game-flow-ui.reward-ui button:not(:disabled):active {
+  box-shadow: inset 0 2px 8px #0005;
+}
+
+#game-flow-ui.management-ui .management-scroll-content {
+  display: grid;
+  flex: 1 1 auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  align-items: start;
+  gap: 12px;
+  min-width: 0;
+  min-height: 0;
+  padding: 4px 4px 12px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #60737b #0c1929;
+  scroll-padding-block: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+#game-flow-ui.management-ui .management-scroll-content > p,
+#game-flow-ui.management-ui .management-scroll-content > section,
+#game-flow-ui.management-ui .management-hub {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+#game-flow-ui.management-ui p {
+  margin: 0;
+  padding: 10px 12px;
+  color: #b7c9d0;
+  text-align: left;
+  text-shadow: none;
+  overflow-wrap: anywhere;
+}
+
+#game-flow-ui.management-ui .management-summary {
+  padding: 12px 16px;
+  background: #1b34404d;
+  border: 1px solid #35545e;
+  border-left: 3px solid #78a997;
+  border-radius: 3px;
+  color: #c9dadb;
+}
+
+#game-flow-ui.management-ui .management-hub {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#game-flow-ui.management-ui .management-hub button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+  min-height: clamp(104px, 14vw, 184px);
+  padding: clamp(16px, 2vw, 26px);
+  border-color: #3a505d;
+  background: linear-gradient(135deg, #203948a6, #142330);
+  text-align: left;
+}
+
+#game-flow-ui.management-ui .management-hub button::after {
+  content: "↗";
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  color: #829ca7;
+  font-size: 18px;
+}
+
+#game-flow-ui.management-ui .hub-label { font-size: clamp(15px, 1.6vw, 21px); font-weight: 600; }
+#game-flow-ui.management-ui .hub-description { color: #a7bdc8; font-size: 12px; font-weight: 400; }
+#game-flow-ui.management-ui .hub-meta { color: #d4b781; font-size: 11px; }
+
+.ui-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  color: #c6a36b;
+  background: currentColor;
+  mask: var(--icon-url) center / contain no-repeat;
+  vertical-align: middle;
+}
+.ui-icon[data-icon="inventory"] { --icon-url: url('/assets/ui/inventory.svg'); }
+.ui-icon[data-icon="party"] { --icon-url: url('/assets/ui/party.svg'); }
+.ui-icon[data-icon="skill"] { --icon-url: url('/assets/ui/skill.svg'); }
+.ui-icon[data-icon="combo"] { --icon-url: url('/assets/ui/combo.svg'); }
+.ui-icon[data-icon="settings"] { --icon-url: url('/assets/ui/settings.svg'); }
+#game-flow-ui.management-ui .management-hub .ui-icon { width: 28px; height: 28px; margin-bottom: 6px; }
+
+#game-flow-ui.management-ui .expedition-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px;
+  color: #a8bdc7;
+  border: 1px dashed #58635e;
+  border-radius: 3px;
+  background: #c6a36b06;
+  font-size: 12px;
+}
+#game-flow-ui.management-ui .expedition-note strong { color: #e3c898; font-size: 16px; font-weight: 500; }
+#game-flow-ui.management-ui .expedition-note small { color: #91a79f; }
+
+#game-flow-ui.management-ui .management-scroll-content > .formation-slot {
+  grid-column: auto;
+  padding: 12px 16px;
+  border: 1px solid #375360;
+  border-left: 3px solid #79aa9c;
+  background: #152c38;
+  border-radius: 3px;
+  color: #dfebe6;
+}
+
+#game-flow-ui.management-ui .management-scroll-content > .management-character-card,
+#game-flow-ui.management-ui .management-scroll-content > .management-skill-card {
+  grid-column: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: clamp(12px, 1.5vw, 20px);
+  background: #172c3980;
+  border: 1px solid #3e5461;
+  border-radius: 4px;
+}
+
+#game-flow-ui.management-ui h2 {
+  grid-column: 1 / -1;
+  margin: 0 0 5px;
+  color: #eed7af;
+  font-size: clamp(15px, 1.35vw, 19px);
+  font-weight: 600;
+}
+
+#game-flow-ui.management-ui .management-character-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#game-flow-ui.management-ui .management-character-picker button { flex: 1; }
+#game-flow-ui.management-ui .management-combo-card { padding: 16px; border: 1px solid #3e5461; border-radius: 3px; }
+#game-flow-ui.management-ui .management-combo-card[data-active="true"] { color: #e8d3a7; background: #254339; border-color: #79a995; }
+
+#game-flow-ui.management-ui .inventory-empty-state {
+  padding: 26px;
+  background: #142a3680;
+  border: 1px dashed #637466;
+  border-radius: 3px;
+  color: #d0d7ce;
+  line-height: 1.8;
+}
+#game-flow-ui.management-ui .inventory-detail-card,
+#game-flow-ui.management-ui .inventory-equipped-list {
+  width: 100%;
+  max-height: none;
+  overflow: visible;
+  border-width: 1px;
+  border-radius: 3px;
+  box-shadow: none;
+  background: #152733;
+}
+#game-flow-ui.management-ui .inventory-compare-line { background: #193340; border-left-color: #79aa9c; }
+
+#game-flow-ui.management-ui .management-footer {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #c6a36b38;
+}
+#game-flow-ui.management-ui .management-footer .footer-note { color: #91a8b2; font-size: 11px; }
+#game-flow-ui.management-ui .management-return { min-width: 144px; border-color: #937e5b; }
+
+#game-flow-ui.management-ui .settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #3e5461;
+  border-radius: 3px;
+  background: #172c3980;
+}
+#game-flow-ui.management-ui .settings-row h2 { margin-bottom: 4px; }
+#game-flow-ui.management-ui .settings-description { color: #a8bdc7; font-size: 12px; }
+#game-flow-ui.management-ui button[role="switch"] { display: flex; align-items: center; gap: 12px; min-width: 114px; background: #12222e; }
+#game-flow-ui.management-ui button[role="switch"]::after { content: ""; width: 30px; height: 18px; border-radius: 12px; border: 2px solid #546c78; background: radial-gradient(circle at 6px 7px, #a8bdc7 5px, transparent 6px) #243744; }
+#game-flow-ui.management-ui button[role="switch"][aria-checked="true"] { color: #c7e3d8; border-color: #6b9d8c; }
+#game-flow-ui.management-ui button[role="switch"][aria-checked="true"]::after { border-color: #78a995; background: radial-gradient(circle at 20px 7px, #eff8ee 5px, transparent 6px) #538974; }
+
+#game-flow-ui.reward-ui { align-items: stretch; text-align: center; }
+#game-flow-ui.reward-ui .reward-title { flex: 0 0 auto; margin: 0; color: #f0d6a1; font: 32px/1.3 "Songti SC", serif; letter-spacing: .18em; }
+#game-flow-ui.reward-ui .reward-subtitle { flex: 0 0 auto; padding: 0; color: #a8bdc7; }
+#game-flow-ui.reward-ui .reward-currencies { padding: 14px; color: #edd39e; border-block: 1px solid #c6a36b44; font-size: 18px; font-variant-numeric: tabular-nums; }
+#game-flow-ui.reward-ui .reward-loot { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); align-content: start; gap: 12px; min-height: 0; flex: 1; overflow: auto; padding: 4px; }
+#game-flow-ui.reward-ui .reward-item { padding: 20px; border: 1px solid #6d8290; border-top-width: 3px; border-radius: 3px; background: #172c3e; text-align: left; }
+#game-flow-ui.reward-ui .reward-item h2 { font-size: 16px; margin: 0 0 10px; color: #f3e8d1; }
+#game-flow-ui.reward-ui .reward-item p { padding: 0; color: #b9cbd2; text-align: left; font-size: 12px; }
+#game-flow-ui.reward-ui .reward-item[data-quality="magic"] { border-color: #78b7ff; }
+#game-flow-ui.reward-ui .reward-item[data-quality="rare"] { border-color: #e6c46d; }
+#game-flow-ui.reward-ui .reward-item[data-quality="epic"] { border-color: #bf8fe9; }
+#game-flow-ui.reward-ui .reward-item[data-quality="abyss"] { border-color: #ed7799; }
+
+#startup-placeholder,
+.system-overlay {
+  background: radial-gradient(ellipse at 50% 35%, #1d3545, #0b1420 70%);
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--rpg-paper);
+}
+.system-overlay { align-content: center; gap: 28px; line-height: 1.6; }
+.system-overlay::before { content: ""; width: 68px; height: 42px; margin-inline: auto; border: 2px solid #c6a36b; border-radius: 6px; box-shadow: inset 0 0 0 5px #0b1420, 0 0 50px #c6a36b12; }
+.system-overlay[data-state="rotate"]::after { content: "横屏开启远征，获得完整的战场视野"; max-width: 260px; color: #a8bdc7; font-size: 13px; }
+
+@container (max-width: 720px) {
+  #game-flow-ui.management-ui .management-hub { gap: 8px; }
+  #game-flow-ui.management-ui .management-hub button { min-height: 100px; padding: 12px; gap: 5px; }
+  #game-flow-ui.management-ui .management-hub .ui-icon { width: 22px; height: 22px; margin-bottom: 2px; }
+  #game-flow-ui.management-ui .hub-description { font-size: 11px; }
+  #game-flow-ui.management-ui .hub-meta { display: none; }
+  #game-flow-ui.management-ui .expedition-note { padding: 12px; gap: 6px; font-size: 11px; }
+  #game-flow-ui.management-ui .expedition-note strong { font-size: 14px; }
+  #game-flow-ui.management-ui .management-header { gap: 12px; padding-bottom: 8px; }
+  #game-flow-ui.management-ui .management-wallet { gap: 8px; font-size: 11px; }
+  #game-flow-ui.management-ui .management-wallet strong { font-size: 13px; margin-left: 4px; }
+  #game-flow-ui.management-ui .management-eyebrow { font-size: 8px; margin-bottom: 2px; }
+  #game-flow-ui.management-ui .management-tabs .ui-icon { width: 16px; height: 16px; margin-right: 5px; }
+  #game-flow-ui.management-ui .management-scroll-content { gap: 8px; }
+  #game-flow-ui.management-ui .management-footer { padding-top: 6px; }
+  #game-flow-ui.management-ui .settings-row { padding: 12px; }
+  #game-flow-ui.reward-ui .reward-item { padding: 12px; }
+}
+
+@media (max-height: 430px) {
+  #game-flow-ui.management-ui, #game-flow-ui.reward-ui { padding: 12px; gap: 6px; }
+  #game-flow-ui.management-ui .management-title { font-size: 21px; }
+  #game-flow-ui.management-ui .management-summary { padding: 8px 12px; }
+  #game-flow-ui.management-ui .management-header { padding-bottom: 6px; }
+  #game-flow-ui.management-ui .management-eyebrow { display: none; }
+  #game-flow-ui.management-ui .management-footer { padding-top: 6px; }
+  #game-flow-ui.reward-ui .reward-title { font-size: 24px; }
+  #game-flow-ui.reward-ui .reward-currencies { padding: 8px; font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #game-flow-ui button { transition: none !important; }
+}
+
+/* On compact landscape phones the five destinations stay visible without scrolling. */
+@media (max-height: 350px) {
+  #game-flow-ui.management-ui[data-page="menu"] .management-summary { display: none; }
+  #game-flow-ui.management-ui[data-page="menu"] .management-scroll-content { padding-bottom: 4px; }
+  #game-flow-ui.management-ui .management-hub button { min-height: 80px; padding: 8px 10px; gap: 3px; }
+  #game-flow-ui.management-ui .management-hub .ui-icon { width: 18px; height: 18px; margin: 0; }
+  #game-flow-ui.management-ui .management-hub button::after { top: 8px; right: 10px; }
+  #game-flow-ui.management-ui .expedition-note { padding: 10px; gap: 4px; }
+  #game-flow-ui.management-ui .expedition-note small { display: none; }
+}
+
+/* Item art shares a stable footprint so labels remain readable while images load. */
+.management-asset-icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  order: -1;
+  border: 1px solid #435369;
+  border-radius: 8px;
+  background: #101a28;
+}
+.management-inventory-item,
+.management-art-heading,
+.management-combo-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-wrap: anywhere;
+}
+.management-art-heading { min-width: 0; }
+@media (max-height: 390px) {
+  .management-asset-icon { width: 36px; height: 36px; flex-basis: 36px; }
+}

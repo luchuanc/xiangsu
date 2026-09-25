@@ -1,0 +1,673 @@
+{
+  "sprite_eq_sword_t1_windblade": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_sword_t1_windblade.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_sword_t1_windblade-hd.png"
+  },
+  "sprite_eq_hammer_t1_stonemaul": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_hammer_t1_stonemaul.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_hammer_t1_stonemaul-hd.png"
+  },
+  "sprite_eq_bow_t1_reed": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_bow_t1_reed.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_bow_t1_reed-hd.png"
+  },
+  "sprite_eq_staff_t1_oak": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_staff_t1_oak.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_staff_t1_oak-hd.png"
+  },
+  "sprite_eq_focus_t1_frostglass": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_focus_t1_frostglass.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_focus_t1_frostglass-hd.png"
+  },
+  "sprite_eq_relic_t1_prayer": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_relic_t1_prayer.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_relic_t1_prayer-hd.png"
+  },
+  "sprite_eq_helmet_t1_traveler": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_helmet_t1_traveler.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_helmet_t1_traveler-hd.png"
+  },
+  "sprite_eq_armor_t1_leather": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_armor_t1_leather.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_armor_t1_leather-hd.png"
+  },
+  "sprite_eq_gloves_t1_hide": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_gloves_t1_hide.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_gloves_t1_hide-hd.png"
+  },
+  "sprite_eq_boots_t1_cloth": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_boots_t1_cloth.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_boots_t1_cloth-hd.png"
+  },
+  "sprite_eq_accessory_t1_charm": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_accessory_t1_charm.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_accessory_t1_charm-hd.png"
+  },
+  "sprite_eq_sword_t2_bloodiron": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_sword_t2_bloodiron.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_sword_t2_bloodiron-hd.png"
+  },
+  "sprite_eq_hammer_t2_bastion": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_hammer_t2_bastion.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_hammer_t2_bastion-hd.png"
+  },
+  "sprite_eq_bow_t2_hawkeye": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_bow_t2_hawkeye.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_bow_t2_hawkeye-hd.png"
+  },
+  "sprite_eq_staff_t2_cinder": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_staff_t2_cinder.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_staff_t2_cinder-hd.png"
+  },
+  "sprite_eq_focus_t2_mist_orb": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_focus_t2_mist_orb.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_focus_t2_mist_orb-hd.png"
+  },
+  "sprite_eq_relic_t2_silver_bell": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_relic_t2_silver_bell.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_relic_t2_silver_bell-hd.png"
+  },
+  "sprite_eq_helmet_t2_iron": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_helmet_t2_iron.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_helmet_t2_iron-hd.png"
+  },
+  "sprite_eq_armor_t2_chain": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_armor_t2_chain.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_armor_t2_chain-hd.png"
+  },
+  "sprite_eq_gloves_t2_rivet": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_gloves_t2_rivet.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_gloves_t2_rivet-hd.png"
+  },
+  "sprite_eq_boots_t2_scout": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_boots_t2_scout.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_boots_t2_scout-hd.png"
+  },
+  "sprite_eq_accessory_t2_gem": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_accessory_t2_gem.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_accessory_t2_gem-hd.png"
+  },
+  "sprite_eq_sword_t3_emberedge": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_sword_t3_emberedge.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_sword_t3_emberedge-hd.png"
+  },
+  "sprite_eq_hammer_t3_magma": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_hammer_t3_magma.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_hammer_t3_magma-hd.png"
+  },
+  "sprite_eq_bow_t3_bloodstring": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_bow_t3_bloodstring.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_bow_t3_bloodstring-hd.png"
+  },
+  "sprite_eq_staff_t3_volcano": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_staff_t3_volcano.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_staff_t3_volcano-hd.png"
+  },
+  "sprite_eq_focus_t3_iceheart": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_focus_t3_iceheart.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_focus_t3_iceheart-hd.png"
+  },
+  "sprite_eq_relic_t3_sun_shard": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_relic_t3_sun_shard.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_relic_t3_sun_shard-hd.png"
+  },
+  "sprite_eq_helmet_t3_ember": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_helmet_t3_ember.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_helmet_t3_ember-hd.png"
+  },
+  "sprite_eq_armor_t3_plate": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_armor_t3_plate.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_armor_t3_plate-hd.png"
+  },
+  "sprite_eq_gloves_t3_flame": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_gloves_t3_flame.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_gloves_t3_flame-hd.png"
+  },
+  "sprite_eq_boots_t3_ash": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_boots_t3_ash.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_boots_t3_ash-hd.png"
+  },
+  "sprite_eq_accessory_t3_sigil": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_accessory_t3_sigil.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_accessory_t3_sigil-hd.png"
+  },
+  "sprite_eq_sword_t4_voidcutter": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_sword_t4_voidcutter.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_sword_t4_voidcutter-hd.png"
+  },
+  "sprite_eq_hammer_t4_jailer": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_hammer_t4_jailer.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_hammer_t4_jailer-hd.png"
+  },
+  "sprite_eq_bow_t4_starchaser": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_bow_t4_starchaser.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_bow_t4_starchaser-hd.png"
+  },
+  "sprite_eq_staff_t4_nightflame": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_staff_t4_nightflame.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_staff_t4_nightflame-hd.png"
+  },
+  "sprite_eq_focus_t4_thousand_lens": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_focus_t4_thousand_lens.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_focus_t4_thousand_lens-hd.png"
+  },
+  "sprite_eq_relic_t4_pale_grail": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_relic_t4_pale_grail.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_relic_t4_pale_grail-hd.png"
+  },
+  "sprite_eq_sword_t5_kingbreaker": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_sword_t5_kingbreaker.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_sword_t5_kingbreaker-hd.png"
+  },
+  "sprite_eq_hammer_t5_worldfall": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_hammer_t5_worldfall.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_hammer_t5_worldfall-hd.png"
+  },
+  "sprite_eq_bow_t5_voidrain": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_bow_t5_voidrain.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_bow_t5_voidrain-hd.png"
+  },
+  "sprite_eq_staff_t5_abyss_sun": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_staff_t5_abyss_sun.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_staff_t5_abyss_sun-hd.png"
+  },
+  "sprite_eq_focus_t5_zero_core": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_focus_t5_zero_core.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_focus_t5_zero_core-hd.png"
+  },
+  "sprite_eq_relic_t5_dawn_crown": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_relic_t5_dawn_crown.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_relic_t5_dawn_crown-hd.png"
+  },
+  "sprite_eq_helmet_t4_abyss": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_helmet_t4_abyss.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_helmet_t4_abyss-hd.png"
+  },
+  "sprite_eq_armor_t4_abyss": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_armor_t4_abyss.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_armor_t4_abyss-hd.png"
+  },
+  "sprite_eq_gloves_t4_crimson": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_gloves_t4_crimson.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_gloves_t4_crimson-hd.png"
+  },
+  "sprite_eq_boots_t4_bloodstep": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_boots_t4_bloodstep.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_boots_t4_bloodstep-hd.png"
+  },
+  "sprite_eq_accessory_t4_eye": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_accessory_t4_eye.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_accessory_t4_eye-hd.png"
+  },
+  "sprite_eq_helmet_t5_pale": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_helmet_t5_pale.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_helmet_t5_pale-hd.png"
+  },
+  "sprite_eq_helmet_t6_king": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_helmet_t6_king.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_helmet_t6_king-hd.png"
+  },
+  "sprite_eq_armor_t5_frost": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_armor_t5_frost.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_armor_t5_frost-hd.png"
+  },
+  "sprite_eq_armor_t6_sovereign": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_armor_t6_sovereign.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_armor_t6_sovereign-hd.png"
+  },
+  "sprite_eq_gloves_t5_void": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_gloves_t5_void.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_gloves_t5_void-hd.png"
+  },
+  "sprite_eq_gloves_t6_king": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_gloves_t6_king.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_gloves_t6_king-hd.png"
+  },
+  "sprite_eq_boots_t5_starless": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_boots_t5_starless.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_boots_t5_starless-hd.png"
+  },
+  "sprite_eq_boots_t6_throne": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_boots_t6_throne.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_boots_t6_throne-hd.png"
+  },
+  "sprite_eq_accessory_t5_star": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_accessory_t5_star.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_accessory_t5_star-hd.png"
+  },
+  "sprite_eq_accessory_t6_crown": {
+    "src": "/assets/art/completion/v1/icons/sprite_eq_accessory_t6_crown.png",
+    "previewSrc": "/assets/art/completion/v1/icons/sprite_eq_accessory_t6_crown-hd.png"
+  },
+  "sprite_battle_enemy_sporeling": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_sporeling.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_sporeling.png"
+  },
+  "sprite_battle_enemy_venom_spider": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_venom_spider.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_venom_spider.png"
+  },
+  "sprite_battle_enemy_fungal_guardian": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_fungal_guardian.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_fungal_guardian.png"
+  },
+  "sprite_battle_boss_brood_spider": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_boss_brood_spider.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_boss_brood_spider.png"
+  },
+  "sprite_battle_enemy_cave_bat": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_cave_bat.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_cave_bat.png"
+  },
+  "sprite_battle_enemy_ore_golem": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_ore_golem.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_ore_golem.png"
+  },
+  "sprite_battle_enemy_bomb_goblin": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_bomb_goblin.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_bomb_goblin.png"
+  },
+  "sprite_battle_boss_iron_devourer": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_boss_iron_devourer.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_boss_iron_devourer.png"
+  },
+  "sprite_battle_enemy_bog_leech": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_bog_leech.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_bog_leech.png"
+  },
+  "sprite_battle_enemy_mist_wraith": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_mist_wraith.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_mist_wraith.png"
+  },
+  "sprite_battle_boss_bog_witch": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_boss_bog_witch.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_boss_bog_witch.png"
+  },
+  "sprite_battle_enemy_ember_hound": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_ember_hound.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_ember_hound.png"
+  },
+  "sprite_battle_enemy_ash_cultist": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_ash_cultist.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_ash_cultist.png"
+  },
+  "sprite_battle_boss_ember_guardian": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_boss_ember_guardian.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_boss_ember_guardian.png"
+  },
+  "sprite_battle_char_frost_seer": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_char_frost_seer.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_char_frost_seer.png"
+  },
+  "sprite_battle_enemy_abyss_mauler": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_abyss_mauler.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_abyss_mauler.png"
+  },
+  "sprite_battle_enemy_dread_eye": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_dread_eye.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_dread_eye.png"
+  },
+  "sprite_battle_boss_abyss_butcher": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_boss_abyss_butcher.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_boss_abyss_butcher.png"
+  },
+  "sprite_battle_enemy_blood_ghoul": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_blood_ghoul.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_blood_ghoul.png"
+  },
+  "sprite_battle_enemy_crimson_acolyte": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_crimson_acolyte.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_crimson_acolyte.png"
+  },
+  "sprite_battle_boss_crimson_knight": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_boss_crimson_knight.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_boss_crimson_knight.png"
+  },
+  "sprite_battle_enemy_frost_warden": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_frost_warden.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_frost_warden.png"
+  },
+  "sprite_battle_enemy_ice_revenant": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_ice_revenant.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_ice_revenant.png"
+  },
+  "sprite_battle_boss_pale_jailer": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_boss_pale_jailer.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_boss_pale_jailer.png"
+  },
+  "sprite_battle_enemy_void_spark": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_void_spark.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_void_spark.png"
+  },
+  "sprite_battle_enemy_watcher_shard": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_watcher_shard.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_watcher_shard.png"
+  },
+  "sprite_battle_boss_thousand_eye": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_boss_thousand_eye.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_boss_thousand_eye.png"
+  },
+  "sprite_battle_enemy_throne_knight": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_throne_knight.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_throne_knight.png"
+  },
+  "sprite_battle_enemy_abyss_herald": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_enemy_abyss_herald.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_enemy_abyss_herald.png"
+  },
+  "sprite_battle_boss_abyss_king": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_boss_abyss_king.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_boss_abyss_king.png"
+  },
+  "sprite_battle_char_ranger": {
+    "src": "/assets/art/completion/v1/battle/sprite_battle_char_ranger.png",
+    "previewSrc": "/assets/art/completion/v1/portraits/sprite_battle_char_ranger.png"
+  },
+  "sprite_field_encounter_floor_02_normal_a": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_02_normal_a.png"
+  },
+  "sprite_field_encounter_floor_02_normal_b": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_02_normal_b.png"
+  },
+  "sprite_field_encounter_floor_02_normal_c": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_02_normal_c.png"
+  },
+  "sprite_field_encounter_floor_02_elite_guardian": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_02_elite_guardian.png"
+  },
+  "sprite_field_encounter_floor_02_boss": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_02_boss.png"
+  },
+  "sprite_field_encounter_floor_03_normal_a": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_03_normal_a.png"
+  },
+  "sprite_field_encounter_floor_03_normal_b": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_03_normal_b.png"
+  },
+  "sprite_field_encounter_floor_03_normal_c": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_03_normal_c.png"
+  },
+  "sprite_field_encounter_floor_03_elite_golem": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_03_elite_golem.png"
+  },
+  "sprite_field_encounter_floor_03_boss": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_03_boss.png"
+  },
+  "sprite_field_encounter_floor_04_normal_a": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_04_normal_a.png"
+  },
+  "sprite_field_encounter_floor_04_normal_b": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_04_normal_b.png"
+  },
+  "sprite_field_encounter_floor_04_normal_c": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_04_normal_c.png"
+  },
+  "sprite_field_encounter_floor_04_elite_wraith": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_04_elite_wraith.png"
+  },
+  "sprite_field_encounter_floor_04_boss": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_04_boss.png"
+  },
+  "sprite_field_encounter_floor_05_normal_a": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_05_normal_a.png"
+  },
+  "sprite_field_encounter_floor_05_normal_b": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_05_normal_b.png"
+  },
+  "sprite_field_encounter_floor_05_normal_c": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_05_normal_c.png"
+  },
+  "sprite_field_encounter_floor_05_elite_cultist": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_05_elite_cultist.png"
+  },
+  "sprite_field_encounter_floor_05_boss": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_05_boss.png"
+  },
+  "sprite_field_encounter_floor_06_normal_a": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_06_normal_a.png"
+  },
+  "sprite_field_encounter_floor_06_normal_b": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_06_normal_b.png"
+  },
+  "sprite_field_encounter_floor_06_normal_c": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_06_normal_c.png"
+  },
+  "sprite_field_encounter_floor_06_elite_mauler": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_06_elite_mauler.png"
+  },
+  "sprite_field_encounter_floor_06_boss": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_06_boss.png"
+  },
+  "sprite_field_encounter_floor_07_normal_a": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_07_normal_a.png"
+  },
+  "sprite_field_encounter_floor_07_normal_b": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_07_normal_b.png"
+  },
+  "sprite_field_encounter_floor_07_normal_c": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_07_normal_c.png"
+  },
+  "sprite_field_encounter_floor_07_elite_acolyte": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_07_elite_acolyte.png"
+  },
+  "sprite_field_encounter_floor_07_boss": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_07_boss.png"
+  },
+  "sprite_field_encounter_floor_08_normal_a": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_08_normal_a.png"
+  },
+  "sprite_field_encounter_floor_08_normal_b": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_08_normal_b.png"
+  },
+  "sprite_field_encounter_floor_08_normal_c": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_08_normal_c.png"
+  },
+  "sprite_field_encounter_floor_08_elite_warden": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_08_elite_warden.png"
+  },
+  "sprite_field_encounter_floor_08_boss": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_08_boss.png"
+  },
+  "sprite_field_encounter_floor_09_normal_a": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_09_normal_a.png"
+  },
+  "sprite_field_encounter_floor_09_normal_b": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_09_normal_b.png"
+  },
+  "sprite_field_encounter_floor_09_normal_c": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_09_normal_c.png"
+  },
+  "sprite_field_encounter_floor_09_elite_shard": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_09_elite_shard.png"
+  },
+  "sprite_field_encounter_floor_09_boss": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_09_boss.png"
+  },
+  "sprite_field_encounter_floor_10_normal_a": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_10_normal_a.png"
+  },
+  "sprite_field_encounter_floor_10_normal_b": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_10_normal_b.png"
+  },
+  "sprite_field_encounter_floor_10_normal_c": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_10_normal_c.png"
+  },
+  "sprite_field_encounter_floor_10_elite_knight": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_10_elite_knight.png"
+  },
+  "sprite_field_encounter_floor_10_boss": {
+    "src": "/assets/art/completion/v1/field/sprite_field_encounter_floor_10_boss.png"
+  },
+  "atlas_battle_fx": {
+    "src": "/assets/art/completion/v1/atlases/battle-fx.png",
+    "dataSrc": "/assets/art/completion/v1/atlases/battle-fx.json"
+  },
+  "icon_status_bleed": {
+    "src": "/assets/art/completion/v1/icons/icon_status_bleed.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_bleed.svg"
+  },
+  "icon_status_burn": {
+    "src": "/assets/art/completion/v1/icons/icon_status_burn.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_burn.svg"
+  },
+  "icon_status_poison": {
+    "src": "/assets/art/completion/v1/icons/icon_status_poison.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_poison.svg"
+  },
+  "icon_status_slow": {
+    "src": "/assets/art/completion/v1/icons/icon_status_slow.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_slow.svg"
+  },
+  "icon_status_freeze": {
+    "src": "/assets/art/completion/v1/icons/icon_status_freeze.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_freeze.svg"
+  },
+  "icon_status_stun": {
+    "src": "/assets/art/completion/v1/icons/icon_status_stun.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_stun.svg"
+  },
+  "icon_status_taunt": {
+    "src": "/assets/art/completion/v1/icons/icon_status_taunt.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_taunt.svg"
+  },
+  "icon_status_guard_30": {
+    "src": "/assets/art/completion/v1/icons/icon_status_guard_30.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_guard_30.svg"
+  },
+  "icon_status_shield": {
+    "src": "/assets/art/completion/v1/icons/icon_status_shield.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_shield.svg"
+  },
+  "icon_status_marked": {
+    "src": "/assets/art/completion/v1/icons/icon_status_marked.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_marked.svg"
+  },
+  "icon_status_haste": {
+    "src": "/assets/art/completion/v1/icons/icon_status_haste.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_haste.svg"
+  },
+  "icon_status_attack_up": {
+    "src": "/assets/art/completion/v1/icons/icon_status_attack_up.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_attack_up.svg"
+  },
+  "icon_status_defense_up": {
+    "src": "/assets/art/completion/v1/icons/icon_status_defense_up.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_defense_up.svg"
+  },
+  "icon_status_fear": {
+    "src": "/assets/art/completion/v1/icons/icon_status_fear.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_fear.svg"
+  },
+  "icon_status_shock": {
+    "src": "/assets/art/completion/v1/icons/icon_status_shock.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_shock.svg"
+  },
+  "icon_status_boss_phase_2": {
+    "src": "/assets/art/completion/v1/icons/icon_status_boss_phase_2.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_boss_phase_2.svg"
+  },
+  "icon_status_boss_phase_3": {
+    "src": "/assets/art/completion/v1/icons/icon_status_boss_phase_3.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_boss_phase_3.svg"
+  },
+  "icon_status_boss_enrage": {
+    "src": "/assets/art/completion/v1/icons/icon_status_boss_enrage.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_status_boss_enrage.svg"
+  },
+  "icon_combo_ember_chain": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_ember_chain.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_ember_chain.svg"
+  },
+  "icon_combo_iron_reprise": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_iron_reprise.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_iron_reprise.svg"
+  },
+  "icon_combo_blood_hunt": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_blood_hunt.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_blood_hunt.svg"
+  },
+  "icon_combo_holy_bulwark": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_holy_bulwark.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_holy_bulwark.svg"
+  },
+  "icon_item_forge_shard": {
+    "src": "/assets/art/completion/v1/icons/icon_item_forge_shard.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_item_forge_shard.svg"
+  },
+  "icon_item_inscription_dust": {
+    "src": "/assets/art/completion/v1/icons/icon_item_inscription_dust.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_item_inscription_dust.svg"
+  },
+  "icon_item_minor_potion": {
+    "src": "/assets/art/completion/v1/icons/icon_item_minor_potion.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_item_minor_potion.svg"
+  },
+  "icon_item_major_potion": {
+    "src": "/assets/art/completion/v1/icons/icon_item_major_potion.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_item_major_potion.svg"
+  },
+  "icon_item_cleansing_tonic": {
+    "src": "/assets/art/completion/v1/icons/icon_item_cleansing_tonic.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_item_cleansing_tonic.svg"
+  },
+  "icon_combo_venom_bloom": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_venom_bloom.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_venom_bloom.svg"
+  },
+  "icon_combo_frozen_verdict": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_frozen_verdict.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_frozen_verdict.svg"
+  },
+  "icon_combo_storm_circuit": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_storm_circuit.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_storm_circuit.svg"
+  },
+  "icon_combo_execution_cadence": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_execution_cadence.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_execution_cadence.svg"
+  },
+  "icon_combo_steadfast_aegis": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_steadfast_aegis.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_steadfast_aegis.svg"
+  },
+  "icon_combo_swift_formation": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_swift_formation.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_swift_formation.svg"
+  },
+  "icon_combo_perfect_strike": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_perfect_strike.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_perfect_strike.svg"
+  },
+  "icon_combo_dark_covenant": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_dark_covenant.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_dark_covenant.svg"
+  },
+  "icon_combo_cleansing_light": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_cleansing_light.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_cleansing_light.svg"
+  },
+  "icon_combo_front_fortress": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_front_fortress.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_front_fortress.svg"
+  },
+  "icon_combo_backline_barrage": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_backline_barrage.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_backline_barrage.svg"
+  },
+  "icon_combo_triune_elements": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_triune_elements.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_triune_elements.svg"
+  },
+  "icon_combo_ultimate_resonance": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_ultimate_resonance.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_ultimate_resonance.svg"
+  },
+  "icon_combo_abyss_dominion": {
+    "src": "/assets/art/completion/v1/icons/icon_combo_abyss_dominion.png",
+    "previewSrc": "/assets/art/completion/v1/source/ui/icon_combo_abyss_dominion.svg"
+  },
+  "atlas_core_ui": {
+    "src": "/assets/art/completion/v1/atlases/core-ui.png",
+    "dataSrc": "/assets/art/completion/v1/atlases/core-ui.json"
+  }
+}

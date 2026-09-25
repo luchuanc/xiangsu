@@ -1,0 +1,4714 @@
+{
+  "schemaVersion": 1,
+  "packId": "visual-v1",
+  "inputRoot": "art/visual/v1/input",
+  "outputRoot": "public/assets/visual/v1",
+  "paletteId": "frontier-night-32-v1",
+  "alphaMode": "threshold-128",
+  "entries": [
+    {
+      "assetId": "tileset_map_town",
+      "bundleId": "town",
+      "kind": "mapTileset",
+      "input": "maps/town.png",
+      "output": "maps/town.png",
+      "width": 256,
+      "height": 256,
+      "tileWidth": 16,
+      "tileHeight": 16,
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的城镇 tileset，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "tileset_map_floor_01",
+      "bundleId": "floor_01",
+      "kind": "mapTileset",
+      "input": "maps/floor_01.png",
+      "output": "maps/floor_01.png",
+      "width": 256,
+      "height": 256,
+      "tileWidth": 16,
+      "tileHeight": 16,
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的第一层 tileset，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_field_char_wanderer",
+      "bundleId": "player_common",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_field_char_wanderer/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_field_char_wanderer/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_field_char_wanderer/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_field_char_wanderer/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_field_char_wanderer/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_field_char_wanderer/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_field_char_wanderer/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_field_char_wanderer/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_field_char_wanderer/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_field_char_wanderer/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_field_char_wanderer/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_field_char_wanderer/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_field_char_wanderer/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_field_char_wanderer/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_field_char_wanderer/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_field_char_wanderer/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_field_char_wanderer/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_field_char_wanderer/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_field_char_wanderer/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_field_char_wanderer/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_field_char_wanderer/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_field_char_wanderer/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_field_char_wanderer/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_field_char_wanderer/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_field_char_wanderer/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_field_char_wanderer/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_field_char_wanderer/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_field_char_wanderer/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_field_char_wanderer/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_field_char_wanderer/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_field_char_wanderer/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_field_char_wanderer/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_field_char_wanderer/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_field_char_wanderer/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_field_char_wanderer/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_field_char_wanderer/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_field_char_wanderer/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_field_char_wanderer/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_field_char_wanderer/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_field_char_wanderer/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_field_char_wanderer.png",
+        "data": "field/sprite_field_char_wanderer.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_field_char_iron_guard",
+      "bundleId": "player_common",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_field_char_iron_guard/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_field_char_iron_guard/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_field_char_iron_guard/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_field_char_iron_guard/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_field_char_iron_guard/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_field_char_iron_guard/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_field_char_iron_guard/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_field_char_iron_guard/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_field_char_iron_guard/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_field_char_iron_guard/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_field_char_iron_guard/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_field_char_iron_guard/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_field_char_iron_guard/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_field_char_iron_guard/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_field_char_iron_guard/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_field_char_iron_guard/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_field_char_iron_guard/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_field_char_iron_guard/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_field_char_iron_guard/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_field_char_iron_guard/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_field_char_iron_guard/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_field_char_iron_guard/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_field_char_iron_guard/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_field_char_iron_guard/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_field_char_iron_guard/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_field_char_iron_guard/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_field_char_iron_guard/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_field_char_iron_guard/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_field_char_iron_guard/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_field_char_iron_guard/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_field_char_iron_guard/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_field_char_iron_guard/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_field_char_iron_guard/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_field_char_iron_guard/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_field_char_iron_guard/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_field_char_iron_guard/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_field_char_iron_guard/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_field_char_iron_guard/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_field_char_iron_guard/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_field_char_iron_guard/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_field_char_iron_guard.png",
+        "data": "field/sprite_field_char_iron_guard.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_field_char_ember_mage",
+      "bundleId": "player_common",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_field_char_ember_mage/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_field_char_ember_mage/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_field_char_ember_mage/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_field_char_ember_mage/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_field_char_ember_mage/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_field_char_ember_mage/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_field_char_ember_mage/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_field_char_ember_mage/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_field_char_ember_mage/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_field_char_ember_mage/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_field_char_ember_mage/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_field_char_ember_mage/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_field_char_ember_mage/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_field_char_ember_mage/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_field_char_ember_mage/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_field_char_ember_mage/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_field_char_ember_mage/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_field_char_ember_mage/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_field_char_ember_mage/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_field_char_ember_mage/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_field_char_ember_mage/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_field_char_ember_mage/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_field_char_ember_mage/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_field_char_ember_mage/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_field_char_ember_mage/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_field_char_ember_mage/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_field_char_ember_mage/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_field_char_ember_mage/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_field_char_ember_mage/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_field_char_ember_mage/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_field_char_ember_mage/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_field_char_ember_mage/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_field_char_ember_mage/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_field_char_ember_mage/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_field_char_ember_mage/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_field_char_ember_mage/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_field_char_ember_mage/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_field_char_ember_mage/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_field_char_ember_mage/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_field_char_ember_mage/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_field_char_ember_mage.png",
+        "data": "field/sprite_field_char_ember_mage.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_field_char_priest",
+      "bundleId": "player_common",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_field_char_priest/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_field_char_priest/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_field_char_priest/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_field_char_priest/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_field_char_priest/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_field_char_priest/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_field_char_priest/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_field_char_priest/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_field_char_priest/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_field_char_priest/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_field_char_priest/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_field_char_priest/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_field_char_priest/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_field_char_priest/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_field_char_priest/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_field_char_priest/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_field_char_priest/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_field_char_priest/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_field_char_priest/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_field_char_priest/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_field_char_priest/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_field_char_priest/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_field_char_priest/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_field_char_priest/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_field_char_priest/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_field_char_priest/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_field_char_priest/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_field_char_priest/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_field_char_priest/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_field_char_priest/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_field_char_priest/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_field_char_priest/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_field_char_priest/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_field_char_priest/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_field_char_priest/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_field_char_priest/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_field_char_priest/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_field_char_priest/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_field_char_priest/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_field_char_priest/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_field_char_priest.png",
+        "data": "field/sprite_field_char_priest.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_field_char_ranger",
+      "bundleId": "player_common",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_field_char_ranger/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_field_char_ranger/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_field_char_ranger/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_field_char_ranger/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_field_char_ranger/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_field_char_ranger/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_field_char_ranger/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_field_char_ranger/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_field_char_ranger/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_field_char_ranger/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_field_char_ranger/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_field_char_ranger/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_field_char_ranger/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_field_char_ranger/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_field_char_ranger/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_field_char_ranger/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_field_char_ranger/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_field_char_ranger/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_field_char_ranger/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_field_char_ranger/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_field_char_ranger/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_field_char_ranger/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_field_char_ranger/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_field_char_ranger/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_field_char_ranger/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_field_char_ranger/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_field_char_ranger/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_field_char_ranger/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_field_char_ranger/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_field_char_ranger/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_field_char_ranger/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_field_char_ranger/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_field_char_ranger/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_field_char_ranger/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_field_char_ranger/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_field_char_ranger/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_field_char_ranger/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_field_char_ranger/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_field_char_ranger/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_field_char_ranger/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_field_char_ranger.png",
+        "data": "field/sprite_field_char_ranger.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_field_char_frost_seer",
+      "bundleId": "player_common",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_field_char_frost_seer/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_field_char_frost_seer/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_field_char_frost_seer/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_field_char_frost_seer/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_field_char_frost_seer/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_field_char_frost_seer/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_field_char_frost_seer/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_field_char_frost_seer/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_field_char_frost_seer/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_field_char_frost_seer/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_field_char_frost_seer/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_field_char_frost_seer/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_field_char_frost_seer/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_field_char_frost_seer/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_field_char_frost_seer/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_field_char_frost_seer/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_field_char_frost_seer/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_field_char_frost_seer/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_field_char_frost_seer/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_field_char_frost_seer/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_field_char_frost_seer/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_field_char_frost_seer/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_field_char_frost_seer/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_field_char_frost_seer/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_field_char_frost_seer/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_field_char_frost_seer/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_field_char_frost_seer/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_field_char_frost_seer/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_field_char_frost_seer/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_field_char_frost_seer/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_field_char_frost_seer/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_field_char_frost_seer/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_field_char_frost_seer/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_field_char_frost_seer/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_field_char_frost_seer/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_field_char_frost_seer/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_field_char_frost_seer/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_field_char_frost_seer/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_field_char_frost_seer/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_field_char_frost_seer/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_field_char_frost_seer.png",
+        "data": "field/sprite_field_char_frost_seer.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_npc_tavern_keeper",
+      "bundleId": "town",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_npc_tavern_keeper/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_npc_tavern_keeper/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_npc_tavern_keeper/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_npc_tavern_keeper/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_npc_tavern_keeper/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_npc_tavern_keeper/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_npc_tavern_keeper/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_npc_tavern_keeper/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_npc_tavern_keeper/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_npc_tavern_keeper/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_npc_tavern_keeper/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_npc_tavern_keeper/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_npc_tavern_keeper/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_npc_tavern_keeper/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_npc_tavern_keeper/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_npc_tavern_keeper/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_npc_tavern_keeper/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_npc_tavern_keeper/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_npc_tavern_keeper/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_npc_tavern_keeper/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_npc_tavern_keeper/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_npc_tavern_keeper/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_npc_tavern_keeper/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_npc_tavern_keeper/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_npc_tavern_keeper/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_npc_tavern_keeper/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_npc_tavern_keeper/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_npc_tavern_keeper/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_npc_tavern_keeper/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_npc_tavern_keeper/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_npc_tavern_keeper/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_npc_tavern_keeper/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_npc_tavern_keeper/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_npc_tavern_keeper/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_npc_tavern_keeper/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_npc_tavern_keeper/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_npc_tavern_keeper/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_npc_tavern_keeper/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_npc_tavern_keeper/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_npc_tavern_keeper/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_npc_tavern_keeper.png",
+        "data": "field/sprite_npc_tavern_keeper.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_npc_blacksmith",
+      "bundleId": "town",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_npc_blacksmith/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_npc_blacksmith/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_npc_blacksmith/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_npc_blacksmith/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_npc_blacksmith/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_npc_blacksmith/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_npc_blacksmith/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_npc_blacksmith/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_npc_blacksmith/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_npc_blacksmith/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_npc_blacksmith/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_npc_blacksmith/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_npc_blacksmith/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_npc_blacksmith/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_npc_blacksmith/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_npc_blacksmith/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_npc_blacksmith/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_npc_blacksmith/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_npc_blacksmith/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_npc_blacksmith/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_npc_blacksmith/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_npc_blacksmith/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_npc_blacksmith/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_npc_blacksmith/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_npc_blacksmith/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_npc_blacksmith/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_npc_blacksmith/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_npc_blacksmith/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_npc_blacksmith/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_npc_blacksmith/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_npc_blacksmith/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_npc_blacksmith/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_npc_blacksmith/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_npc_blacksmith/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_npc_blacksmith/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_npc_blacksmith/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_npc_blacksmith/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_npc_blacksmith/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_npc_blacksmith/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_npc_blacksmith/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_npc_blacksmith.png",
+        "data": "field/sprite_npc_blacksmith.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_npc_skill_mentor",
+      "bundleId": "town",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_npc_skill_mentor/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_npc_skill_mentor/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_npc_skill_mentor/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_npc_skill_mentor/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_npc_skill_mentor/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_npc_skill_mentor/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_npc_skill_mentor/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_npc_skill_mentor/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_npc_skill_mentor/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_npc_skill_mentor/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_npc_skill_mentor/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_npc_skill_mentor/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_npc_skill_mentor/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_npc_skill_mentor/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_npc_skill_mentor/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_npc_skill_mentor/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_npc_skill_mentor/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_npc_skill_mentor/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_npc_skill_mentor/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_npc_skill_mentor/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_npc_skill_mentor/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_npc_skill_mentor/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_npc_skill_mentor/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_npc_skill_mentor/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_npc_skill_mentor/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_npc_skill_mentor/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_npc_skill_mentor/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_npc_skill_mentor/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_npc_skill_mentor/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_npc_skill_mentor/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_npc_skill_mentor/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_npc_skill_mentor/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_npc_skill_mentor/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_npc_skill_mentor/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_npc_skill_mentor/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_npc_skill_mentor/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_npc_skill_mentor/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_npc_skill_mentor/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_npc_skill_mentor/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_npc_skill_mentor/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_npc_skill_mentor.png",
+        "data": "field/sprite_npc_skill_mentor.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_npc_merchant",
+      "bundleId": "town",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_npc_merchant/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_npc_merchant/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_npc_merchant/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_npc_merchant/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_npc_merchant/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_npc_merchant/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_npc_merchant/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_npc_merchant/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_npc_merchant/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_npc_merchant/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_npc_merchant/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_npc_merchant/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_npc_merchant/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_npc_merchant/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_npc_merchant/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_npc_merchant/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_npc_merchant/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_npc_merchant/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_npc_merchant/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_npc_merchant/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_npc_merchant/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_npc_merchant/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_npc_merchant/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_npc_merchant/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_npc_merchant/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_npc_merchant/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_npc_merchant/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_npc_merchant/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_npc_merchant/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_npc_merchant/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_npc_merchant/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_npc_merchant/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_npc_merchant/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_npc_merchant/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_npc_merchant/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_npc_merchant/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_npc_merchant/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_npc_merchant/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_npc_merchant/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_npc_merchant/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_npc_merchant.png",
+        "data": "field/sprite_npc_merchant.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_npc_innkeeper",
+      "bundleId": "town",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_npc_innkeeper/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_npc_innkeeper/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_npc_innkeeper/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_npc_innkeeper/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_npc_innkeeper/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_npc_innkeeper/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_npc_innkeeper/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_npc_innkeeper/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_npc_innkeeper/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_npc_innkeeper/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_npc_innkeeper/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_npc_innkeeper/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_npc_innkeeper/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_npc_innkeeper/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_npc_innkeeper/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_npc_innkeeper/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_npc_innkeeper/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_npc_innkeeper/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_npc_innkeeper/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_npc_innkeeper/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_npc_innkeeper/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_npc_innkeeper/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_npc_innkeeper/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_npc_innkeeper/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_npc_innkeeper/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_npc_innkeeper/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_npc_innkeeper/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_npc_innkeeper/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_npc_innkeeper/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_npc_innkeeper/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_npc_innkeeper/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_npc_innkeeper/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_npc_innkeeper/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_npc_innkeeper/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_npc_innkeeper/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_npc_innkeeper/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_npc_innkeeper/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_npc_innkeeper/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_npc_innkeeper/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_npc_innkeeper/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_npc_innkeeper.png",
+        "data": "field/sprite_npc_innkeeper.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_npc_cartographer",
+      "bundleId": "town",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_npc_cartographer/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_npc_cartographer/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_npc_cartographer/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_npc_cartographer/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_npc_cartographer/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_npc_cartographer/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_npc_cartographer/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_npc_cartographer/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_npc_cartographer/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_npc_cartographer/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_npc_cartographer/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_npc_cartographer/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_npc_cartographer/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_npc_cartographer/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_npc_cartographer/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_npc_cartographer/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_npc_cartographer/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_npc_cartographer/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_npc_cartographer/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_npc_cartographer/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_npc_cartographer/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_npc_cartographer/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_npc_cartographer/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_npc_cartographer/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_npc_cartographer/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_npc_cartographer/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_npc_cartographer/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_npc_cartographer/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_npc_cartographer/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_npc_cartographer/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_npc_cartographer/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_npc_cartographer/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_npc_cartographer/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_npc_cartographer/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_npc_cartographer/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_npc_cartographer/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_npc_cartographer/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_npc_cartographer/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_npc_cartographer/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_npc_cartographer/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_npc_cartographer.png",
+        "data": "field/sprite_npc_cartographer.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_npc_abyss_watcher",
+      "bundleId": "town",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_npc_abyss_watcher/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_npc_abyss_watcher/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_npc_abyss_watcher/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_npc_abyss_watcher/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_npc_abyss_watcher/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_npc_abyss_watcher/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_npc_abyss_watcher/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_npc_abyss_watcher/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_npc_abyss_watcher/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_npc_abyss_watcher/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_npc_abyss_watcher/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_npc_abyss_watcher/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_npc_abyss_watcher/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_npc_abyss_watcher/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_npc_abyss_watcher/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_npc_abyss_watcher/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_npc_abyss_watcher/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_npc_abyss_watcher/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_npc_abyss_watcher/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_npc_abyss_watcher/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_npc_abyss_watcher/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_npc_abyss_watcher/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_npc_abyss_watcher/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_npc_abyss_watcher/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_npc_abyss_watcher/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_npc_abyss_watcher/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_npc_abyss_watcher/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_npc_abyss_watcher/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_npc_abyss_watcher/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_npc_abyss_watcher/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_npc_abyss_watcher/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_npc_abyss_watcher/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_npc_abyss_watcher/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_npc_abyss_watcher/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_npc_abyss_watcher/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_npc_abyss_watcher/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_npc_abyss_watcher/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_npc_abyss_watcher/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_npc_abyss_watcher/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_npc_abyss_watcher/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_npc_abyss_watcher.png",
+        "data": "field/sprite_npc_abyss_watcher.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_field_encounter_floor_01_normal_a",
+      "bundleId": "floor_01",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_normal_a/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_field_encounter_floor_01_normal_a.png",
+        "data": "field/sprite_field_encounter_floor_01_normal_a.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_field_encounter_floor_01_normal_b",
+      "bundleId": "floor_01",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_normal_b/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_field_encounter_floor_01_normal_b.png",
+        "data": "field/sprite_field_encounter_floor_01_normal_b.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_field_encounter_floor_01_normal_c",
+      "bundleId": "floor_01",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_normal_c/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_field_encounter_floor_01_normal_c.png",
+        "data": "field/sprite_field_encounter_floor_01_normal_c.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_field_encounter_floor_01_elite_boar",
+      "bundleId": "floor_01",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_elite_boar/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_field_encounter_floor_01_elite_boar.png",
+        "data": "field/sprite_field_encounter_floor_01_elite_boar.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "assetId": "sprite_field_encounter_floor_01_boss",
+      "bundleId": "floor_01",
+      "kind": "fieldActor",
+      "frameWidth": 24,
+      "frameHeight": 32,
+      "columns": 10,
+      "rows": 4,
+      "frames": [
+        {
+          "id": "down_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_boss/down_idle_00.png"
+        },
+        {
+          "id": "down_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_boss/down_idle_01.png"
+        },
+        {
+          "id": "down_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_boss/down_idle_02.png"
+        },
+        {
+          "id": "down_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_boss/down_idle_03.png"
+        },
+        {
+          "id": "down_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_boss/down_walk_00.png"
+        },
+        {
+          "id": "down_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_boss/down_walk_01.png"
+        },
+        {
+          "id": "down_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_boss/down_walk_02.png"
+        },
+        {
+          "id": "down_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_boss/down_walk_03.png"
+        },
+        {
+          "id": "down_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_boss/down_walk_04.png"
+        },
+        {
+          "id": "down_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_boss/down_walk_05.png"
+        },
+        {
+          "id": "left_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_boss/left_idle_00.png"
+        },
+        {
+          "id": "left_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_boss/left_idle_01.png"
+        },
+        {
+          "id": "left_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_boss/left_idle_02.png"
+        },
+        {
+          "id": "left_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_boss/left_idle_03.png"
+        },
+        {
+          "id": "left_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_boss/left_walk_00.png"
+        },
+        {
+          "id": "left_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_boss/left_walk_01.png"
+        },
+        {
+          "id": "left_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_boss/left_walk_02.png"
+        },
+        {
+          "id": "left_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_boss/left_walk_03.png"
+        },
+        {
+          "id": "left_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_boss/left_walk_04.png"
+        },
+        {
+          "id": "left_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_boss/left_walk_05.png"
+        },
+        {
+          "id": "right_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_boss/right_idle_00.png"
+        },
+        {
+          "id": "right_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_boss/right_idle_01.png"
+        },
+        {
+          "id": "right_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_boss/right_idle_02.png"
+        },
+        {
+          "id": "right_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_boss/right_idle_03.png"
+        },
+        {
+          "id": "right_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_boss/right_walk_00.png"
+        },
+        {
+          "id": "right_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_boss/right_walk_01.png"
+        },
+        {
+          "id": "right_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_boss/right_walk_02.png"
+        },
+        {
+          "id": "right_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_boss/right_walk_03.png"
+        },
+        {
+          "id": "right_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_boss/right_walk_04.png"
+        },
+        {
+          "id": "right_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_boss/right_walk_05.png"
+        },
+        {
+          "id": "up_idle_00",
+          "input": "field/sprite_field_encounter_floor_01_boss/up_idle_00.png"
+        },
+        {
+          "id": "up_idle_01",
+          "input": "field/sprite_field_encounter_floor_01_boss/up_idle_01.png"
+        },
+        {
+          "id": "up_idle_02",
+          "input": "field/sprite_field_encounter_floor_01_boss/up_idle_02.png"
+        },
+        {
+          "id": "up_idle_03",
+          "input": "field/sprite_field_encounter_floor_01_boss/up_idle_03.png"
+        },
+        {
+          "id": "up_walk_00",
+          "input": "field/sprite_field_encounter_floor_01_boss/up_walk_00.png"
+        },
+        {
+          "id": "up_walk_01",
+          "input": "field/sprite_field_encounter_floor_01_boss/up_walk_01.png"
+        },
+        {
+          "id": "up_walk_02",
+          "input": "field/sprite_field_encounter_floor_01_boss/up_walk_02.png"
+        },
+        {
+          "id": "up_walk_03",
+          "input": "field/sprite_field_encounter_floor_01_boss/up_walk_03.png"
+        },
+        {
+          "id": "up_walk_04",
+          "input": "field/sprite_field_encounter_floor_01_boss/up_walk_04.png"
+        },
+        {
+          "id": "up_walk_05",
+          "input": "field/sprite_field_encounter_floor_01_boss/up_walk_05.png"
+        }
+      ],
+      "output": {
+        "image": "field/sprite_field_encounter_floor_01_boss.png",
+        "data": "field/sprite_field_encounter_floor_01_boss.json"
+      },
+      "anchor": {
+        "x": 12,
+        "y": 28
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 field actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "kind": "battleActor",
+      "assetId": "sprite_battle_char_wanderer",
+      "bundleId": "player_common",
+      "boss": false,
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "columns": 27,
+      "rows": 1,
+      "frames": [
+        {
+          "id": "idle_00",
+          "input": "battle/sprite_battle_char_wanderer/idle_00.png"
+        },
+        {
+          "id": "idle_01",
+          "input": "battle/sprite_battle_char_wanderer/idle_01.png"
+        },
+        {
+          "id": "idle_02",
+          "input": "battle/sprite_battle_char_wanderer/idle_02.png"
+        },
+        {
+          "id": "idle_03",
+          "input": "battle/sprite_battle_char_wanderer/idle_03.png"
+        },
+        {
+          "id": "attack_00",
+          "input": "battle/sprite_battle_char_wanderer/attack_00.png"
+        },
+        {
+          "id": "attack_01",
+          "input": "battle/sprite_battle_char_wanderer/attack_01.png"
+        },
+        {
+          "id": "attack_02",
+          "input": "battle/sprite_battle_char_wanderer/attack_02.png"
+        },
+        {
+          "id": "attack_03",
+          "input": "battle/sprite_battle_char_wanderer/attack_03.png"
+        },
+        {
+          "id": "attack_04",
+          "input": "battle/sprite_battle_char_wanderer/attack_04.png"
+        },
+        {
+          "id": "attack_05",
+          "input": "battle/sprite_battle_char_wanderer/attack_05.png"
+        },
+        {
+          "id": "skill_00",
+          "input": "battle/sprite_battle_char_wanderer/skill_00.png"
+        },
+        {
+          "id": "skill_01",
+          "input": "battle/sprite_battle_char_wanderer/skill_01.png"
+        },
+        {
+          "id": "skill_02",
+          "input": "battle/sprite_battle_char_wanderer/skill_02.png"
+        },
+        {
+          "id": "skill_03",
+          "input": "battle/sprite_battle_char_wanderer/skill_03.png"
+        },
+        {
+          "id": "skill_04",
+          "input": "battle/sprite_battle_char_wanderer/skill_04.png"
+        },
+        {
+          "id": "skill_05",
+          "input": "battle/sprite_battle_char_wanderer/skill_05.png"
+        },
+        {
+          "id": "skill_06",
+          "input": "battle/sprite_battle_char_wanderer/skill_06.png"
+        },
+        {
+          "id": "skill_07",
+          "input": "battle/sprite_battle_char_wanderer/skill_07.png"
+        },
+        {
+          "id": "hit_00",
+          "input": "battle/sprite_battle_char_wanderer/hit_00.png"
+        },
+        {
+          "id": "hit_01",
+          "input": "battle/sprite_battle_char_wanderer/hit_01.png"
+        },
+        {
+          "id": "hit_02",
+          "input": "battle/sprite_battle_char_wanderer/hit_02.png"
+        },
+        {
+          "id": "down_00",
+          "input": "battle/sprite_battle_char_wanderer/down_00.png"
+        },
+        {
+          "id": "down_01",
+          "input": "battle/sprite_battle_char_wanderer/down_01.png"
+        },
+        {
+          "id": "down_02",
+          "input": "battle/sprite_battle_char_wanderer/down_02.png"
+        },
+        {
+          "id": "down_03",
+          "input": "battle/sprite_battle_char_wanderer/down_03.png"
+        },
+        {
+          "id": "down_04",
+          "input": "battle/sprite_battle_char_wanderer/down_04.png"
+        },
+        {
+          "id": "down_05",
+          "input": "battle/sprite_battle_char_wanderer/down_05.png"
+        }
+      ],
+      "output": {
+        "image": "battle/sprite_battle_char_wanderer.png",
+        "data": "battle/sprite_battle_char_wanderer.json"
+      },
+      "anchor": {
+        "x": 24,
+        "y": 42
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 battle actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "kind": "battleActor",
+      "assetId": "sprite_battle_char_iron_guard",
+      "bundleId": "player_common",
+      "boss": false,
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "columns": 27,
+      "rows": 1,
+      "frames": [
+        {
+          "id": "idle_00",
+          "input": "battle/sprite_battle_char_iron_guard/idle_00.png"
+        },
+        {
+          "id": "idle_01",
+          "input": "battle/sprite_battle_char_iron_guard/idle_01.png"
+        },
+        {
+          "id": "idle_02",
+          "input": "battle/sprite_battle_char_iron_guard/idle_02.png"
+        },
+        {
+          "id": "idle_03",
+          "input": "battle/sprite_battle_char_iron_guard/idle_03.png"
+        },
+        {
+          "id": "attack_00",
+          "input": "battle/sprite_battle_char_iron_guard/attack_00.png"
+        },
+        {
+          "id": "attack_01",
+          "input": "battle/sprite_battle_char_iron_guard/attack_01.png"
+        },
+        {
+          "id": "attack_02",
+          "input": "battle/sprite_battle_char_iron_guard/attack_02.png"
+        },
+        {
+          "id": "attack_03",
+          "input": "battle/sprite_battle_char_iron_guard/attack_03.png"
+        },
+        {
+          "id": "attack_04",
+          "input": "battle/sprite_battle_char_iron_guard/attack_04.png"
+        },
+        {
+          "id": "attack_05",
+          "input": "battle/sprite_battle_char_iron_guard/attack_05.png"
+        },
+        {
+          "id": "skill_00",
+          "input": "battle/sprite_battle_char_iron_guard/skill_00.png"
+        },
+        {
+          "id": "skill_01",
+          "input": "battle/sprite_battle_char_iron_guard/skill_01.png"
+        },
+        {
+          "id": "skill_02",
+          "input": "battle/sprite_battle_char_iron_guard/skill_02.png"
+        },
+        {
+          "id": "skill_03",
+          "input": "battle/sprite_battle_char_iron_guard/skill_03.png"
+        },
+        {
+          "id": "skill_04",
+          "input": "battle/sprite_battle_char_iron_guard/skill_04.png"
+        },
+        {
+          "id": "skill_05",
+          "input": "battle/sprite_battle_char_iron_guard/skill_05.png"
+        },
+        {
+          "id": "skill_06",
+          "input": "battle/sprite_battle_char_iron_guard/skill_06.png"
+        },
+        {
+          "id": "skill_07",
+          "input": "battle/sprite_battle_char_iron_guard/skill_07.png"
+        },
+        {
+          "id": "hit_00",
+          "input": "battle/sprite_battle_char_iron_guard/hit_00.png"
+        },
+        {
+          "id": "hit_01",
+          "input": "battle/sprite_battle_char_iron_guard/hit_01.png"
+        },
+        {
+          "id": "hit_02",
+          "input": "battle/sprite_battle_char_iron_guard/hit_02.png"
+        },
+        {
+          "id": "down_00",
+          "input": "battle/sprite_battle_char_iron_guard/down_00.png"
+        },
+        {
+          "id": "down_01",
+          "input": "battle/sprite_battle_char_iron_guard/down_01.png"
+        },
+        {
+          "id": "down_02",
+          "input": "battle/sprite_battle_char_iron_guard/down_02.png"
+        },
+        {
+          "id": "down_03",
+          "input": "battle/sprite_battle_char_iron_guard/down_03.png"
+        },
+        {
+          "id": "down_04",
+          "input": "battle/sprite_battle_char_iron_guard/down_04.png"
+        },
+        {
+          "id": "down_05",
+          "input": "battle/sprite_battle_char_iron_guard/down_05.png"
+        }
+      ],
+      "output": {
+        "image": "battle/sprite_battle_char_iron_guard.png",
+        "data": "battle/sprite_battle_char_iron_guard.json"
+      },
+      "anchor": {
+        "x": 24,
+        "y": 42
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 battle actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "kind": "battleActor",
+      "assetId": "sprite_battle_char_ember_mage",
+      "bundleId": "player_common",
+      "boss": false,
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "columns": 27,
+      "rows": 1,
+      "frames": [
+        {
+          "id": "idle_00",
+          "input": "battle/sprite_battle_char_ember_mage/idle_00.png"
+        },
+        {
+          "id": "idle_01",
+          "input": "battle/sprite_battle_char_ember_mage/idle_01.png"
+        },
+        {
+          "id": "idle_02",
+          "input": "battle/sprite_battle_char_ember_mage/idle_02.png"
+        },
+        {
+          "id": "idle_03",
+          "input": "battle/sprite_battle_char_ember_mage/idle_03.png"
+        },
+        {
+          "id": "attack_00",
+          "input": "battle/sprite_battle_char_ember_mage/attack_00.png"
+        },
+        {
+          "id": "attack_01",
+          "input": "battle/sprite_battle_char_ember_mage/attack_01.png"
+        },
+        {
+          "id": "attack_02",
+          "input": "battle/sprite_battle_char_ember_mage/attack_02.png"
+        },
+        {
+          "id": "attack_03",
+          "input": "battle/sprite_battle_char_ember_mage/attack_03.png"
+        },
+        {
+          "id": "attack_04",
+          "input": "battle/sprite_battle_char_ember_mage/attack_04.png"
+        },
+        {
+          "id": "attack_05",
+          "input": "battle/sprite_battle_char_ember_mage/attack_05.png"
+        },
+        {
+          "id": "skill_00",
+          "input": "battle/sprite_battle_char_ember_mage/skill_00.png"
+        },
+        {
+          "id": "skill_01",
+          "input": "battle/sprite_battle_char_ember_mage/skill_01.png"
+        },
+        {
+          "id": "skill_02",
+          "input": "battle/sprite_battle_char_ember_mage/skill_02.png"
+        },
+        {
+          "id": "skill_03",
+          "input": "battle/sprite_battle_char_ember_mage/skill_03.png"
+        },
+        {
+          "id": "skill_04",
+          "input": "battle/sprite_battle_char_ember_mage/skill_04.png"
+        },
+        {
+          "id": "skill_05",
+          "input": "battle/sprite_battle_char_ember_mage/skill_05.png"
+        },
+        {
+          "id": "skill_06",
+          "input": "battle/sprite_battle_char_ember_mage/skill_06.png"
+        },
+        {
+          "id": "skill_07",
+          "input": "battle/sprite_battle_char_ember_mage/skill_07.png"
+        },
+        {
+          "id": "hit_00",
+          "input": "battle/sprite_battle_char_ember_mage/hit_00.png"
+        },
+        {
+          "id": "hit_01",
+          "input": "battle/sprite_battle_char_ember_mage/hit_01.png"
+        },
+        {
+          "id": "hit_02",
+          "input": "battle/sprite_battle_char_ember_mage/hit_02.png"
+        },
+        {
+          "id": "down_00",
+          "input": "battle/sprite_battle_char_ember_mage/down_00.png"
+        },
+        {
+          "id": "down_01",
+          "input": "battle/sprite_battle_char_ember_mage/down_01.png"
+        },
+        {
+          "id": "down_02",
+          "input": "battle/sprite_battle_char_ember_mage/down_02.png"
+        },
+        {
+          "id": "down_03",
+          "input": "battle/sprite_battle_char_ember_mage/down_03.png"
+        },
+        {
+          "id": "down_04",
+          "input": "battle/sprite_battle_char_ember_mage/down_04.png"
+        },
+        {
+          "id": "down_05",
+          "input": "battle/sprite_battle_char_ember_mage/down_05.png"
+        }
+      ],
+      "output": {
+        "image": "battle/sprite_battle_char_ember_mage.png",
+        "data": "battle/sprite_battle_char_ember_mage.json"
+      },
+      "anchor": {
+        "x": 24,
+        "y": 42
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 battle actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "kind": "battleActor",
+      "assetId": "sprite_battle_char_priest",
+      "bundleId": "player_common",
+      "boss": false,
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "columns": 27,
+      "rows": 1,
+      "frames": [
+        {
+          "id": "idle_00",
+          "input": "battle/sprite_battle_char_priest/idle_00.png"
+        },
+        {
+          "id": "idle_01",
+          "input": "battle/sprite_battle_char_priest/idle_01.png"
+        },
+        {
+          "id": "idle_02",
+          "input": "battle/sprite_battle_char_priest/idle_02.png"
+        },
+        {
+          "id": "idle_03",
+          "input": "battle/sprite_battle_char_priest/idle_03.png"
+        },
+        {
+          "id": "attack_00",
+          "input": "battle/sprite_battle_char_priest/attack_00.png"
+        },
+        {
+          "id": "attack_01",
+          "input": "battle/sprite_battle_char_priest/attack_01.png"
+        },
+        {
+          "id": "attack_02",
+          "input": "battle/sprite_battle_char_priest/attack_02.png"
+        },
+        {
+          "id": "attack_03",
+          "input": "battle/sprite_battle_char_priest/attack_03.png"
+        },
+        {
+          "id": "attack_04",
+          "input": "battle/sprite_battle_char_priest/attack_04.png"
+        },
+        {
+          "id": "attack_05",
+          "input": "battle/sprite_battle_char_priest/attack_05.png"
+        },
+        {
+          "id": "skill_00",
+          "input": "battle/sprite_battle_char_priest/skill_00.png"
+        },
+        {
+          "id": "skill_01",
+          "input": "battle/sprite_battle_char_priest/skill_01.png"
+        },
+        {
+          "id": "skill_02",
+          "input": "battle/sprite_battle_char_priest/skill_02.png"
+        },
+        {
+          "id": "skill_03",
+          "input": "battle/sprite_battle_char_priest/skill_03.png"
+        },
+        {
+          "id": "skill_04",
+          "input": "battle/sprite_battle_char_priest/skill_04.png"
+        },
+        {
+          "id": "skill_05",
+          "input": "battle/sprite_battle_char_priest/skill_05.png"
+        },
+        {
+          "id": "skill_06",
+          "input": "battle/sprite_battle_char_priest/skill_06.png"
+        },
+        {
+          "id": "skill_07",
+          "input": "battle/sprite_battle_char_priest/skill_07.png"
+        },
+        {
+          "id": "hit_00",
+          "input": "battle/sprite_battle_char_priest/hit_00.png"
+        },
+        {
+          "id": "hit_01",
+          "input": "battle/sprite_battle_char_priest/hit_01.png"
+        },
+        {
+          "id": "hit_02",
+          "input": "battle/sprite_battle_char_priest/hit_02.png"
+        },
+        {
+          "id": "down_00",
+          "input": "battle/sprite_battle_char_priest/down_00.png"
+        },
+        {
+          "id": "down_01",
+          "input": "battle/sprite_battle_char_priest/down_01.png"
+        },
+        {
+          "id": "down_02",
+          "input": "battle/sprite_battle_char_priest/down_02.png"
+        },
+        {
+          "id": "down_03",
+          "input": "battle/sprite_battle_char_priest/down_03.png"
+        },
+        {
+          "id": "down_04",
+          "input": "battle/sprite_battle_char_priest/down_04.png"
+        },
+        {
+          "id": "down_05",
+          "input": "battle/sprite_battle_char_priest/down_05.png"
+        }
+      ],
+      "output": {
+        "image": "battle/sprite_battle_char_priest.png",
+        "data": "battle/sprite_battle_char_priest.json"
+      },
+      "anchor": {
+        "x": 24,
+        "y": 42
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 battle actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "kind": "battleActor",
+      "assetId": "sprite_battle_enemy_grass_slime",
+      "bundleId": "floor_01",
+      "boss": false,
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "columns": 27,
+      "rows": 1,
+      "frames": [
+        {
+          "id": "idle_00",
+          "input": "battle/sprite_battle_enemy_grass_slime/idle_00.png"
+        },
+        {
+          "id": "idle_01",
+          "input": "battle/sprite_battle_enemy_grass_slime/idle_01.png"
+        },
+        {
+          "id": "idle_02",
+          "input": "battle/sprite_battle_enemy_grass_slime/idle_02.png"
+        },
+        {
+          "id": "idle_03",
+          "input": "battle/sprite_battle_enemy_grass_slime/idle_03.png"
+        },
+        {
+          "id": "attack_00",
+          "input": "battle/sprite_battle_enemy_grass_slime/attack_00.png"
+        },
+        {
+          "id": "attack_01",
+          "input": "battle/sprite_battle_enemy_grass_slime/attack_01.png"
+        },
+        {
+          "id": "attack_02",
+          "input": "battle/sprite_battle_enemy_grass_slime/attack_02.png"
+        },
+        {
+          "id": "attack_03",
+          "input": "battle/sprite_battle_enemy_grass_slime/attack_03.png"
+        },
+        {
+          "id": "attack_04",
+          "input": "battle/sprite_battle_enemy_grass_slime/attack_04.png"
+        },
+        {
+          "id": "attack_05",
+          "input": "battle/sprite_battle_enemy_grass_slime/attack_05.png"
+        },
+        {
+          "id": "skill_00",
+          "input": "battle/sprite_battle_enemy_grass_slime/skill_00.png"
+        },
+        {
+          "id": "skill_01",
+          "input": "battle/sprite_battle_enemy_grass_slime/skill_01.png"
+        },
+        {
+          "id": "skill_02",
+          "input": "battle/sprite_battle_enemy_grass_slime/skill_02.png"
+        },
+        {
+          "id": "skill_03",
+          "input": "battle/sprite_battle_enemy_grass_slime/skill_03.png"
+        },
+        {
+          "id": "skill_04",
+          "input": "battle/sprite_battle_enemy_grass_slime/skill_04.png"
+        },
+        {
+          "id": "skill_05",
+          "input": "battle/sprite_battle_enemy_grass_slime/skill_05.png"
+        },
+        {
+          "id": "skill_06",
+          "input": "battle/sprite_battle_enemy_grass_slime/skill_06.png"
+        },
+        {
+          "id": "skill_07",
+          "input": "battle/sprite_battle_enemy_grass_slime/skill_07.png"
+        },
+        {
+          "id": "hit_00",
+          "input": "battle/sprite_battle_enemy_grass_slime/hit_00.png"
+        },
+        {
+          "id": "hit_01",
+          "input": "battle/sprite_battle_enemy_grass_slime/hit_01.png"
+        },
+        {
+          "id": "hit_02",
+          "input": "battle/sprite_battle_enemy_grass_slime/hit_02.png"
+        },
+        {
+          "id": "down_00",
+          "input": "battle/sprite_battle_enemy_grass_slime/down_00.png"
+        },
+        {
+          "id": "down_01",
+          "input": "battle/sprite_battle_enemy_grass_slime/down_01.png"
+        },
+        {
+          "id": "down_02",
+          "input": "battle/sprite_battle_enemy_grass_slime/down_02.png"
+        },
+        {
+          "id": "down_03",
+          "input": "battle/sprite_battle_enemy_grass_slime/down_03.png"
+        },
+        {
+          "id": "down_04",
+          "input": "battle/sprite_battle_enemy_grass_slime/down_04.png"
+        },
+        {
+          "id": "down_05",
+          "input": "battle/sprite_battle_enemy_grass_slime/down_05.png"
+        }
+      ],
+      "output": {
+        "image": "battle/sprite_battle_enemy_grass_slime.png",
+        "data": "battle/sprite_battle_enemy_grass_slime.json"
+      },
+      "anchor": {
+        "x": 24,
+        "y": 42
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 battle actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "kind": "battleActor",
+      "assetId": "sprite_battle_enemy_thorn_rat",
+      "bundleId": "floor_01",
+      "boss": false,
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "columns": 27,
+      "rows": 1,
+      "frames": [
+        {
+          "id": "idle_00",
+          "input": "battle/sprite_battle_enemy_thorn_rat/idle_00.png"
+        },
+        {
+          "id": "idle_01",
+          "input": "battle/sprite_battle_enemy_thorn_rat/idle_01.png"
+        },
+        {
+          "id": "idle_02",
+          "input": "battle/sprite_battle_enemy_thorn_rat/idle_02.png"
+        },
+        {
+          "id": "idle_03",
+          "input": "battle/sprite_battle_enemy_thorn_rat/idle_03.png"
+        },
+        {
+          "id": "attack_00",
+          "input": "battle/sprite_battle_enemy_thorn_rat/attack_00.png"
+        },
+        {
+          "id": "attack_01",
+          "input": "battle/sprite_battle_enemy_thorn_rat/attack_01.png"
+        },
+        {
+          "id": "attack_02",
+          "input": "battle/sprite_battle_enemy_thorn_rat/attack_02.png"
+        },
+        {
+          "id": "attack_03",
+          "input": "battle/sprite_battle_enemy_thorn_rat/attack_03.png"
+        },
+        {
+          "id": "attack_04",
+          "input": "battle/sprite_battle_enemy_thorn_rat/attack_04.png"
+        },
+        {
+          "id": "attack_05",
+          "input": "battle/sprite_battle_enemy_thorn_rat/attack_05.png"
+        },
+        {
+          "id": "skill_00",
+          "input": "battle/sprite_battle_enemy_thorn_rat/skill_00.png"
+        },
+        {
+          "id": "skill_01",
+          "input": "battle/sprite_battle_enemy_thorn_rat/skill_01.png"
+        },
+        {
+          "id": "skill_02",
+          "input": "battle/sprite_battle_enemy_thorn_rat/skill_02.png"
+        },
+        {
+          "id": "skill_03",
+          "input": "battle/sprite_battle_enemy_thorn_rat/skill_03.png"
+        },
+        {
+          "id": "skill_04",
+          "input": "battle/sprite_battle_enemy_thorn_rat/skill_04.png"
+        },
+        {
+          "id": "skill_05",
+          "input": "battle/sprite_battle_enemy_thorn_rat/skill_05.png"
+        },
+        {
+          "id": "skill_06",
+          "input": "battle/sprite_battle_enemy_thorn_rat/skill_06.png"
+        },
+        {
+          "id": "skill_07",
+          "input": "battle/sprite_battle_enemy_thorn_rat/skill_07.png"
+        },
+        {
+          "id": "hit_00",
+          "input": "battle/sprite_battle_enemy_thorn_rat/hit_00.png"
+        },
+        {
+          "id": "hit_01",
+          "input": "battle/sprite_battle_enemy_thorn_rat/hit_01.png"
+        },
+        {
+          "id": "hit_02",
+          "input": "battle/sprite_battle_enemy_thorn_rat/hit_02.png"
+        },
+        {
+          "id": "down_00",
+          "input": "battle/sprite_battle_enemy_thorn_rat/down_00.png"
+        },
+        {
+          "id": "down_01",
+          "input": "battle/sprite_battle_enemy_thorn_rat/down_01.png"
+        },
+        {
+          "id": "down_02",
+          "input": "battle/sprite_battle_enemy_thorn_rat/down_02.png"
+        },
+        {
+          "id": "down_03",
+          "input": "battle/sprite_battle_enemy_thorn_rat/down_03.png"
+        },
+        {
+          "id": "down_04",
+          "input": "battle/sprite_battle_enemy_thorn_rat/down_04.png"
+        },
+        {
+          "id": "down_05",
+          "input": "battle/sprite_battle_enemy_thorn_rat/down_05.png"
+        }
+      ],
+      "output": {
+        "image": "battle/sprite_battle_enemy_thorn_rat.png",
+        "data": "battle/sprite_battle_enemy_thorn_rat.json"
+      },
+      "anchor": {
+        "x": 24,
+        "y": 42
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 battle actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "kind": "battleActor",
+      "assetId": "sprite_battle_enemy_fang_wolf",
+      "bundleId": "floor_01",
+      "boss": false,
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "columns": 27,
+      "rows": 1,
+      "frames": [
+        {
+          "id": "idle_00",
+          "input": "battle/sprite_battle_enemy_fang_wolf/idle_00.png"
+        },
+        {
+          "id": "idle_01",
+          "input": "battle/sprite_battle_enemy_fang_wolf/idle_01.png"
+        },
+        {
+          "id": "idle_02",
+          "input": "battle/sprite_battle_enemy_fang_wolf/idle_02.png"
+        },
+        {
+          "id": "idle_03",
+          "input": "battle/sprite_battle_enemy_fang_wolf/idle_03.png"
+        },
+        {
+          "id": "attack_00",
+          "input": "battle/sprite_battle_enemy_fang_wolf/attack_00.png"
+        },
+        {
+          "id": "attack_01",
+          "input": "battle/sprite_battle_enemy_fang_wolf/attack_01.png"
+        },
+        {
+          "id": "attack_02",
+          "input": "battle/sprite_battle_enemy_fang_wolf/attack_02.png"
+        },
+        {
+          "id": "attack_03",
+          "input": "battle/sprite_battle_enemy_fang_wolf/attack_03.png"
+        },
+        {
+          "id": "attack_04",
+          "input": "battle/sprite_battle_enemy_fang_wolf/attack_04.png"
+        },
+        {
+          "id": "attack_05",
+          "input": "battle/sprite_battle_enemy_fang_wolf/attack_05.png"
+        },
+        {
+          "id": "skill_00",
+          "input": "battle/sprite_battle_enemy_fang_wolf/skill_00.png"
+        },
+        {
+          "id": "skill_01",
+          "input": "battle/sprite_battle_enemy_fang_wolf/skill_01.png"
+        },
+        {
+          "id": "skill_02",
+          "input": "battle/sprite_battle_enemy_fang_wolf/skill_02.png"
+        },
+        {
+          "id": "skill_03",
+          "input": "battle/sprite_battle_enemy_fang_wolf/skill_03.png"
+        },
+        {
+          "id": "skill_04",
+          "input": "battle/sprite_battle_enemy_fang_wolf/skill_04.png"
+        },
+        {
+          "id": "skill_05",
+          "input": "battle/sprite_battle_enemy_fang_wolf/skill_05.png"
+        },
+        {
+          "id": "skill_06",
+          "input": "battle/sprite_battle_enemy_fang_wolf/skill_06.png"
+        },
+        {
+          "id": "skill_07",
+          "input": "battle/sprite_battle_enemy_fang_wolf/skill_07.png"
+        },
+        {
+          "id": "hit_00",
+          "input": "battle/sprite_battle_enemy_fang_wolf/hit_00.png"
+        },
+        {
+          "id": "hit_01",
+          "input": "battle/sprite_battle_enemy_fang_wolf/hit_01.png"
+        },
+        {
+          "id": "hit_02",
+          "input": "battle/sprite_battle_enemy_fang_wolf/hit_02.png"
+        },
+        {
+          "id": "down_00",
+          "input": "battle/sprite_battle_enemy_fang_wolf/down_00.png"
+        },
+        {
+          "id": "down_01",
+          "input": "battle/sprite_battle_enemy_fang_wolf/down_01.png"
+        },
+        {
+          "id": "down_02",
+          "input": "battle/sprite_battle_enemy_fang_wolf/down_02.png"
+        },
+        {
+          "id": "down_03",
+          "input": "battle/sprite_battle_enemy_fang_wolf/down_03.png"
+        },
+        {
+          "id": "down_04",
+          "input": "battle/sprite_battle_enemy_fang_wolf/down_04.png"
+        },
+        {
+          "id": "down_05",
+          "input": "battle/sprite_battle_enemy_fang_wolf/down_05.png"
+        }
+      ],
+      "output": {
+        "image": "battle/sprite_battle_enemy_fang_wolf.png",
+        "data": "battle/sprite_battle_enemy_fang_wolf.json"
+      },
+      "anchor": {
+        "x": 24,
+        "y": 42
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 battle actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "kind": "battleActor",
+      "assetId": "sprite_battle_enemy_goblin_scout",
+      "bundleId": "floor_01",
+      "boss": false,
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "columns": 27,
+      "rows": 1,
+      "frames": [
+        {
+          "id": "idle_00",
+          "input": "battle/sprite_battle_enemy_goblin_scout/idle_00.png"
+        },
+        {
+          "id": "idle_01",
+          "input": "battle/sprite_battle_enemy_goblin_scout/idle_01.png"
+        },
+        {
+          "id": "idle_02",
+          "input": "battle/sprite_battle_enemy_goblin_scout/idle_02.png"
+        },
+        {
+          "id": "idle_03",
+          "input": "battle/sprite_battle_enemy_goblin_scout/idle_03.png"
+        },
+        {
+          "id": "attack_00",
+          "input": "battle/sprite_battle_enemy_goblin_scout/attack_00.png"
+        },
+        {
+          "id": "attack_01",
+          "input": "battle/sprite_battle_enemy_goblin_scout/attack_01.png"
+        },
+        {
+          "id": "attack_02",
+          "input": "battle/sprite_battle_enemy_goblin_scout/attack_02.png"
+        },
+        {
+          "id": "attack_03",
+          "input": "battle/sprite_battle_enemy_goblin_scout/attack_03.png"
+        },
+        {
+          "id": "attack_04",
+          "input": "battle/sprite_battle_enemy_goblin_scout/attack_04.png"
+        },
+        {
+          "id": "attack_05",
+          "input": "battle/sprite_battle_enemy_goblin_scout/attack_05.png"
+        },
+        {
+          "id": "skill_00",
+          "input": "battle/sprite_battle_enemy_goblin_scout/skill_00.png"
+        },
+        {
+          "id": "skill_01",
+          "input": "battle/sprite_battle_enemy_goblin_scout/skill_01.png"
+        },
+        {
+          "id": "skill_02",
+          "input": "battle/sprite_battle_enemy_goblin_scout/skill_02.png"
+        },
+        {
+          "id": "skill_03",
+          "input": "battle/sprite_battle_enemy_goblin_scout/skill_03.png"
+        },
+        {
+          "id": "skill_04",
+          "input": "battle/sprite_battle_enemy_goblin_scout/skill_04.png"
+        },
+        {
+          "id": "skill_05",
+          "input": "battle/sprite_battle_enemy_goblin_scout/skill_05.png"
+        },
+        {
+          "id": "skill_06",
+          "input": "battle/sprite_battle_enemy_goblin_scout/skill_06.png"
+        },
+        {
+          "id": "skill_07",
+          "input": "battle/sprite_battle_enemy_goblin_scout/skill_07.png"
+        },
+        {
+          "id": "hit_00",
+          "input": "battle/sprite_battle_enemy_goblin_scout/hit_00.png"
+        },
+        {
+          "id": "hit_01",
+          "input": "battle/sprite_battle_enemy_goblin_scout/hit_01.png"
+        },
+        {
+          "id": "hit_02",
+          "input": "battle/sprite_battle_enemy_goblin_scout/hit_02.png"
+        },
+        {
+          "id": "down_00",
+          "input": "battle/sprite_battle_enemy_goblin_scout/down_00.png"
+        },
+        {
+          "id": "down_01",
+          "input": "battle/sprite_battle_enemy_goblin_scout/down_01.png"
+        },
+        {
+          "id": "down_02",
+          "input": "battle/sprite_battle_enemy_goblin_scout/down_02.png"
+        },
+        {
+          "id": "down_03",
+          "input": "battle/sprite_battle_enemy_goblin_scout/down_03.png"
+        },
+        {
+          "id": "down_04",
+          "input": "battle/sprite_battle_enemy_goblin_scout/down_04.png"
+        },
+        {
+          "id": "down_05",
+          "input": "battle/sprite_battle_enemy_goblin_scout/down_05.png"
+        }
+      ],
+      "output": {
+        "image": "battle/sprite_battle_enemy_goblin_scout.png",
+        "data": "battle/sprite_battle_enemy_goblin_scout.json"
+      },
+      "anchor": {
+        "x": 24,
+        "y": 42
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 battle actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "kind": "battleActor",
+      "assetId": "sprite_battle_enemy_stonehide_boar",
+      "bundleId": "floor_01",
+      "boss": false,
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "columns": 27,
+      "rows": 1,
+      "frames": [
+        {
+          "id": "idle_00",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/idle_00.png"
+        },
+        {
+          "id": "idle_01",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/idle_01.png"
+        },
+        {
+          "id": "idle_02",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/idle_02.png"
+        },
+        {
+          "id": "idle_03",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/idle_03.png"
+        },
+        {
+          "id": "attack_00",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/attack_00.png"
+        },
+        {
+          "id": "attack_01",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/attack_01.png"
+        },
+        {
+          "id": "attack_02",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/attack_02.png"
+        },
+        {
+          "id": "attack_03",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/attack_03.png"
+        },
+        {
+          "id": "attack_04",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/attack_04.png"
+        },
+        {
+          "id": "attack_05",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/attack_05.png"
+        },
+        {
+          "id": "skill_00",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/skill_00.png"
+        },
+        {
+          "id": "skill_01",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/skill_01.png"
+        },
+        {
+          "id": "skill_02",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/skill_02.png"
+        },
+        {
+          "id": "skill_03",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/skill_03.png"
+        },
+        {
+          "id": "skill_04",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/skill_04.png"
+        },
+        {
+          "id": "skill_05",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/skill_05.png"
+        },
+        {
+          "id": "skill_06",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/skill_06.png"
+        },
+        {
+          "id": "skill_07",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/skill_07.png"
+        },
+        {
+          "id": "hit_00",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/hit_00.png"
+        },
+        {
+          "id": "hit_01",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/hit_01.png"
+        },
+        {
+          "id": "hit_02",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/hit_02.png"
+        },
+        {
+          "id": "down_00",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/down_00.png"
+        },
+        {
+          "id": "down_01",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/down_01.png"
+        },
+        {
+          "id": "down_02",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/down_02.png"
+        },
+        {
+          "id": "down_03",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/down_03.png"
+        },
+        {
+          "id": "down_04",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/down_04.png"
+        },
+        {
+          "id": "down_05",
+          "input": "battle/sprite_battle_enemy_stonehide_boar/down_05.png"
+        }
+      ],
+      "output": {
+        "image": "battle/sprite_battle_enemy_stonehide_boar.png",
+        "data": "battle/sprite_battle_enemy_stonehide_boar.json"
+      },
+      "anchor": {
+        "x": 24,
+        "y": 42
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 battle actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    },
+    {
+      "kind": "battleActor",
+      "assetId": "sprite_battle_boss_horned_king",
+      "bundleId": "floor_01",
+      "boss": true,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "columns": 27,
+      "rows": 1,
+      "frames": [
+        {
+          "id": "idle_00",
+          "input": "battle/sprite_battle_boss_horned_king/idle_00.png"
+        },
+        {
+          "id": "idle_01",
+          "input": "battle/sprite_battle_boss_horned_king/idle_01.png"
+        },
+        {
+          "id": "idle_02",
+          "input": "battle/sprite_battle_boss_horned_king/idle_02.png"
+        },
+        {
+          "id": "idle_03",
+          "input": "battle/sprite_battle_boss_horned_king/idle_03.png"
+        },
+        {
+          "id": "attack_00",
+          "input": "battle/sprite_battle_boss_horned_king/attack_00.png"
+        },
+        {
+          "id": "attack_01",
+          "input": "battle/sprite_battle_boss_horned_king/attack_01.png"
+        },
+        {
+          "id": "attack_02",
+          "input": "battle/sprite_battle_boss_horned_king/attack_02.png"
+        },
+        {
+          "id": "attack_03",
+          "input": "battle/sprite_battle_boss_horned_king/attack_03.png"
+        },
+        {
+          "id": "attack_04",
+          "input": "battle/sprite_battle_boss_horned_king/attack_04.png"
+        },
+        {
+          "id": "attack_05",
+          "input": "battle/sprite_battle_boss_horned_king/attack_05.png"
+        },
+        {
+          "id": "skill_00",
+          "input": "battle/sprite_battle_boss_horned_king/skill_00.png"
+        },
+        {
+          "id": "skill_01",
+          "input": "battle/sprite_battle_boss_horned_king/skill_01.png"
+        },
+        {
+          "id": "skill_02",
+          "input": "battle/sprite_battle_boss_horned_king/skill_02.png"
+        },
+        {
+          "id": "skill_03",
+          "input": "battle/sprite_battle_boss_horned_king/skill_03.png"
+        },
+        {
+          "id": "skill_04",
+          "input": "battle/sprite_battle_boss_horned_king/skill_04.png"
+        },
+        {
+          "id": "skill_05",
+          "input": "battle/sprite_battle_boss_horned_king/skill_05.png"
+        },
+        {
+          "id": "skill_06",
+          "input": "battle/sprite_battle_boss_horned_king/skill_06.png"
+        },
+        {
+          "id": "skill_07",
+          "input": "battle/sprite_battle_boss_horned_king/skill_07.png"
+        },
+        {
+          "id": "hit_00",
+          "input": "battle/sprite_battle_boss_horned_king/hit_00.png"
+        },
+        {
+          "id": "hit_01",
+          "input": "battle/sprite_battle_boss_horned_king/hit_01.png"
+        },
+        {
+          "id": "hit_02",
+          "input": "battle/sprite_battle_boss_horned_king/hit_02.png"
+        },
+        {
+          "id": "down_00",
+          "input": "battle/sprite_battle_boss_horned_king/down_00.png"
+        },
+        {
+          "id": "down_01",
+          "input": "battle/sprite_battle_boss_horned_king/down_01.png"
+        },
+        {
+          "id": "down_02",
+          "input": "battle/sprite_battle_boss_horned_king/down_02.png"
+        },
+        {
+          "id": "down_03",
+          "input": "battle/sprite_battle_boss_horned_king/down_03.png"
+        },
+        {
+          "id": "down_04",
+          "input": "battle/sprite_battle_boss_horned_king/down_04.png"
+        },
+        {
+          "id": "down_05",
+          "input": "battle/sprite_battle_boss_horned_king/down_05.png"
+        }
+      ],
+      "output": {
+        "image": "battle/sprite_battle_boss_horned_king.png",
+        "data": "battle/sprite_battle_boss_horned_king.json"
+      },
+      "anchor": {
+        "x": 32,
+        "y": 58
+      },
+      "source": {
+        "sourceKind": "original",
+        "sourceNote": "确定性手工像素绘制的 battle actor sheet，项目原创。",
+        "licenseId": "project-original",
+        "licenseFile": null
+      }
+    }
+  ]
+}

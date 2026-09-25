@@ -1,0 +1,46 @@
+{
+  "name": "xiangsu-pixel-rpg",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test:unit": "vitest run",
+    "test:balance": "vite-node scripts/run-balance-simulation.ts",
+    "verify:content": "vite-node scripts/validate-content.ts",
+    "verify:assets": "vite-node scripts/validate-assets.ts",
+    "pack:completion-art": "vite-node scripts/art-source/pack-completion-art.ts && vite-node scripts/art-source/pack-completion-ui.ts",
+    "verify:completion-art": "vite-node scripts/art-source/verify-completion-art.ts",
+    "generate:map-art": "vite-node scripts/art-source/generate-map-art.ts",
+    "verify:map-art": "vite-node scripts/art-source/verify-map-art.ts",
+    "generate:field-art": "vite-node scripts/art-source/generate-field-art.ts",
+    "generate:field-direction-sheet": "vite-node scripts/art-source/field-actors/generate-direction-contact-sheet.ts",
+    "verify:field-art": "vite-node scripts/art-source/verify-field-art.ts",
+    "generate:battle-art": "vite-node scripts/art-source/generate-battle-art.ts",
+    "verify:battle-art": "vite-node scripts/art-source/verify-battle-art.ts",
+    "generate:battle-contact-sheet": "vite-node scripts/art-source/generate-battle-contact-sheet.ts",
+    "pack:art": "vite-node scripts/art-pack/pack-art.ts --config art/visual/v1/art-pack.json",
+    "verify:art": "vite-node scripts/art-pack/verify-art.ts --config art/visual/v1/art-pack.json",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "pixi.js": "^8.19.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.2.0",
+    "eslint": "^9.39.5",
+    "fake-indexeddb": "^6.2.5",
+    "sharp": "0.34.5",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.67.0",
+    "vite": "^6.4.3",
+    "vite-node": "^3.2.4",
+    "vitest": "^3.2.7"
+  }
+}

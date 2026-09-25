@@ -1,0 +1,25 @@
+{
+  "counts": {
+    "equipment": 60,
+    "enemies": 35,
+    "characters": 6,
+    "encounters": 50,
+    "statuses": 18,
+    "combos": 18
+  },
+  "skills": {
+    "total": 97,
+    "animated": 91,
+    "passive": 6,
+    "note": "Passive effects have icons but no cast animation. Active skills share preset and element families."
+  },
+  "newAssets": 179,
+  "effectFrames": 110,
+  "uiFrames": 30,
+  "issues": [],
+  "limitations": [
+    "New monster action sheets use affine motion of generated poses, not hand-drawn articulation.",
+    "Later-floor field markers use directional flips and shading, not distinct four-view drawings.",
+    "Map tiles and audio were not replaced in this asset pass."
+  ]
+}

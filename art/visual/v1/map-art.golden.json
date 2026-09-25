@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "paletteId": "FRONTIER_NIGHT_32_V1",
+  "tileSize": 16,
+  "tilesets": {
+    "town": {
+      "rawPixelSha256": "2b3f4c0ac77d3123ef5f1f2059b0d2d28af2c7acfd3ed4226f13155c2917ab76",
+      "autotileEdgeSha256": "a9f01fa09cd62cbd798c526b5386726c87ae32c546e6bbef81c02f9b3009c93b"
+    },
+    "floor_01": {
+      "rawPixelSha256": "f0da1652839a4e3ca5175a60b48290b9c56e59b98e13f38483bfe4be65419390",
+      "autotileEdgeSha256": "d80ba503c3e2e172c56c14466b6ef832f6a734a49954fa5d0a65266b60d89eeb"
+    }
+  },
+  "visualLayers": {
+    "map_town": {
+      "sha256": "f6202c5502fa7c3a8b743d571062b326768af969a5571d3a72bf2bf963df55c0"
+    },
+    "map_floor_01": {
+      "sha256": "0a5e9d03a375d080fd32d9c1c08a8929bbd4a8c4a188d599a703aeb2eccd6a04"
+    }
+  },
+  "contactSheet": {
+    "sha256": "3e9f308c0de31e66299da9696c09be057a5b044f05076dfee0538bd858b7d1ad"
+  }
+}

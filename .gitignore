@@ -1,0 +1,14 @@
+node_modules/
+dist/
+output/
+test-results/
+playwright-report/
+.playwright-cli/
+.superpowers/
+.vscode/
+.DS_Store
+.env
+.env.*
+*.log
+.probe-*
+/vis*.png
